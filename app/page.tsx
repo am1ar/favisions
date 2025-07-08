@@ -14,7 +14,6 @@ export default function LandingPage() {
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-dark-blue-900 to-dark-blue-500 text-white">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
               {/* Text Content */}
               <div className="flex flex-col space-y-6 text-right justify-center items-center">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-gold-500 drop-shadow-lg text-center">
@@ -43,7 +42,6 @@ export default function LandingPage() {
                   </Button>
                 </div>
               </div>
-            </div>
           </div>
         </section>
 
