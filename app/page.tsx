@@ -16,12 +16,12 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
               {/* Text Content */}
-              <div className="flex flex-col space-y-6 text-right">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-gold-500 drop-shadow-lg">
+              <div className="flex flex-col space-y-6 text-right justify-center items-center">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-gold-500 drop-shadow-lg text-center">
                   شركة رؤى بعيدة
                 </h1>
                 <h2 className="text-2xl font-semibold text-gold-400 mb-4">رؤية متقدمة، حلول متكاملة</h2>
-                <p className="max-w-[600px] text-lg md:text-xl/relaxed lg:text-2xl/relaxed text-gray-200">
+                <p className="max-w-[600px] md:text-xl/relaxed lg:text-2xl/relaxed text-gray-200 text-center text-lg">
                   شركة رؤى بعيدة هي شريكك الاستراتيجي الموثوق في المملكة العربية السعودية، نتخصص في تقديم حلول متكاملة
                   ومبتكرة تشمل الإنشاءات والتصميم المعماري ومواد البناء واللوجستيات وحلول تقنية المعلومات. نلتزم بتقديم
                   أعلى معايير الجودة والابتكار في كل مشروع، مع التركيز على تحقيق رؤية 2030 للمملكة من خلال حلول مستدامة
