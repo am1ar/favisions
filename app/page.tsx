@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Handshake, Lightbulb, Award, Building, Box, Laptop, Truck, Compass } from "lucide-react"
+import { Handshake, Lightbulb, Award, GraduationCap, Truck } from "lucide-react" // Updated icons
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -21,10 +21,10 @@ export default function LandingPage() {
               </h1>
               <h2 className="text-2xl font-semibold text-white mb-4">رؤية متقدمة، حلول متكاملة</h2>
               <p className="max-w-[600px] md:text-xl/relaxed lg:text-2xl/relaxed text-white text-center text-lg">
-                شركة رؤى بعيدة هي شريكك الاستراتيجي الموثوق في المملكة العربية السعودية، نتخصص في تقديم حلول متكاملة
-                ومبتكرة تشمل الإنشاءات والتصميم المعماري ومواد البناء واللوجستيات وحلول تقنية المعلومات. نلتزم بتقديم
-                أعلى معايير الجودة والابتكار في كل مشروع، مع التركيز على تحقيق رؤية 2030 للمملكة من خلال حلول مستدامة
-                وتقنيات متطورة تلبي احتياجات المستقبل.
+                شركة رؤى بعيدة هي شريكك الاستراتيجي الموثوق في المملكة العربية السعودية، نتخصص في تقديم حلول تقنية
+                متكاملة ومبتكرة تدعم الأنظمة التعليمية المعقدة، وتعزز التواصل الداخلي للمؤسسات الحكومية، وتطور أنظمة
+                النقل واللوجستيات. نلتزم بتقديم أعلى معايير الجودة والابتكار في كل مشروع، مع التركيز على تحقيق رؤية 2030
+                للمملكة من خلال حلول مستدامة وتقنيات متطورة تلبي احتياجات المستقبل.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-end">
                 <Button
@@ -35,8 +35,8 @@ export default function LandingPage() {
                 </Button>
                 <Button
                   asChild
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg font-semibold rounded-md transition-colors bg-transparent"
+                  variant="default" // Changed to default variant for solid background
+                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 text-lg font-semibold rounded-md shadow-lg transition-colors"
                 >
                   <Link href="/services">اكتشف خدماتنا</Link>
                 </Button>
@@ -89,58 +89,33 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Services Overview Section */}
+        {/* Services Overview Section - Updated to focus on technical services */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gradient-blue via-gradient-purple to-gradient-pink text-light-background">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-light-background drop-shadow">
-              خدماتنا المتخصصة
+              خدماتنا التقنية المتخصصة
             </h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+            <div className="grid gap-8 md:grid-cols-2">
               <Card className="bg-white text-dark-text border-light-border/30 text-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <Building className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-xl font-bold text-primary">الإنشاءات</CardTitle>
+                  <GraduationCap className="h-10 w-10 text-primary" />
+                  <CardTitle className="text-xl font-bold text-primary">حلول التعليم والاتصال الحكومي</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-medium-text">
-                    حلول بناء متكاملة للمشاريع السكنية والتجارية والصناعية بأعلى معايير الجودة.
+                    تطوير أنظمة تعليم إلكتروني متقدمة وحلول اتصال داخلي مخصصة للمؤسسات الحكومية.
                   </p>
                 </CardContent>
               </Card>
               <Card className="bg-white text-dark-text border-light-border/30 text-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <Compass className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-xl font-bold text-primary">التصميم المعماري</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text">تصاميم معمارية مبتكرة تجمع بين الجمال والوظائف العملية والاستدامة.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white text-dark-text border-light-border/30 text-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <Box className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-xl font-bold text-primary">مواد البناء</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text">توفير أجود أنواع مواد البناء والأخشاب عالية الجودة لمشاريعك.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white text-dark-text border-light-border/30 text-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
                   <Truck className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-xl font-bold text-primary">اللوجستيات</CardTitle>
+                  <CardTitle className="text-xl font-bold text-primary">أنظمة النقل واللوجستيات الذكية</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-medium-text">خدمات لوجستية متطورة لضمان تسليم المواد والمعدات في الوقت المحدد.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white text-dark-text border-light-border/30 text-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <Laptop className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-xl font-bold text-primary">حلول تقنية المعلومات</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text">تطوير حلول برمجية متقدمة وبنية تحتية تقنية لدعم نمو أعمالك.</p>
+                  <p className="text-medium-text">
+                    تطوير حلول لوجستية متكاملة وأنظمة نقل ذكية لتحسين كفاءة سلاسل الإمداد وخدمات الركاب.
+                  </p>
                 </CardContent>
               </Card>
             </div>

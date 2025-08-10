@@ -1,18 +1,10 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import {
-  Building,
-  Box,
   Laptop,
   Wrench,
-  HardHat,
-  Factory,
   Truck,
   Server,
-  Compass,
-  Ruler,
-  GraduationCap,
-  MessageSquareMore,
   Workflow,
   Car,
   Warehouse,
@@ -22,6 +14,10 @@ import {
   Cloud,
   Brain,
   ShieldCheck,
+  GraduationCap,
+  MessageSquareMore,
+  Bus,
+  LineChart,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -36,8 +32,8 @@ export default function ServicesPage() {
               خدماتنا المتخصصة
             </h1>
             <p className="max-w-[800px] text-lg md:text-xl/relaxed lg:text-2xl/relaxed text-white">
-              نقدم مجموعة شاملة من الخدمات المتخصصة والمتكاملة التي تلبي احتياجات عملائنا في مختلف القطاعات، مع التركيز
-              على الجودة والابتكار والحلول التقنية المتقدمة.
+              نقدم مجموعة شاملة من الخدمات التقنية المتخصصة والمتكاملة التي تلبي احتياجات عملائنا في مختلف القطاعات، مع
+              التركيز على الأنظمة التعليمية، الاتصال الحكومي، وحلول النقل واللوجستيات المتقدمة.
             </p>
           </div>
         </section>
@@ -47,9 +43,9 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary drop-shadow">
               تفاصيل خدماتنا
             </h2>
-            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+            <div className="grid gap-10 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
               {/* Advanced IT Solutions */}
-              <Card className="bg-white text-dark-text border-light-border/30 text-right shadow-xl hover:shadow-2xl transition-shadow duration-300 md:col-span-2">
+              <Card className="bg-white text-dark-text border-light-border/30 text-right shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <CardHeader className="flex flex-row-reverse items-center gap-4 pb-4">
                   <Laptop className="h-10 w-10 text-primary" />
                   <CardTitle className="text-2xl font-bold text-primary">حلول تقنية المعلومات المتقدمة</CardTitle>
@@ -100,18 +96,16 @@ export default function ServicesPage() {
                 </CardContent>
               </Card>
 
-              {/* Smart Logistics & Supply Chain Solutions */}
-              <Card className="bg-white text-dark-text border-light-border/30 text-right shadow-xl hover:shadow-2xl transition-shadow duration-300 md:col-span-2">
+              {/* Smart Logistics & Transportation Systems */}
+              <Card className="bg-white text-dark-text border-light-border/30 text-right shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <CardHeader className="flex flex-row-reverse items-center gap-4 pb-4">
                   <Truck className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-2xl font-bold text-primary">
-                    حلول اللوجستيات وسلاسل الإمداد الذكية
-                  </CardTitle>
+                  <CardTitle className="text-2xl font-bold text-primary">حلول اللوجستيات وأنظمة النقل الذكية</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-medium-text mb-4">
-                    حلول لوجستية متكاملة ومتطورة تضمن سلاسة وكفاءة سلسلة التوريد الخاصة بك، من التخزين إلى التوزيع
-                    والتسليم، مع التركيز على الأنظمة المعقدة.
+                    نقدم حلولاً لوجستية متكاملة وأنظمة نقل متطورة لضمان سلاسة وكفاءة سلاسل الإمداد وخدمات نقل الركاب، مع
+                    التركيز على الابتكار والتحليلات المتقدمة.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
                     <ul className="list-disc pr-6 text-medium-text space-y-2">
@@ -121,7 +115,7 @@ export default function ServicesPage() {
                       </li>
                       <li className="flex items-center gap-2">
                         <Car className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span>أنظمة إدارة الأساطيل والنقل الذكي.</span>
+                        <span>أنظمة إدارة أساطيل الشحن والنقل الذكي.</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Warehouse className="h-5 w-5 text-primary flex-shrink-0" />
@@ -134,79 +128,23 @@ export default function ServicesPage() {
                     </ul>
                     <ul className="list-disc pr-6 text-medium-text space-y-2">
                       <li className="flex items-center gap-2">
+                        <Bus className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span>تطوير أنظمة نقل الركاب الذكية.</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <LineChart className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span>تحليل المسارات وتطبيق الذكاء الاصطناعي لتحليل البيانات.</span>
+                      </li>
+                      <li className="flex items-center gap-2">
                         <Route className="h-5 w-5 text-primary flex-shrink-0" />
                         <span>تحسين المسارات والتخطيط اللوجستي.</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Code className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span>تطوير برمجيات لوجستية مخصصة.</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Factory className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span>حلول النقل متعدد الوسائط (Multimodal Transport).</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Box className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span>إدارة الشحن والتخليص الجمركي.</span>
+                        <span>تطوير برمجيات لوجستية ونقل مخصصة.</span>
                       </li>
                     </ul>
                   </div>
-                </CardContent>
-              </Card>
-
-              {/* Engineering & Construction Support */}
-              <Card className="bg-white text-dark-text border-light-border/30 text-right shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <CardHeader className="flex flex-row-reverse items-center gap-4 pb-4">
-                  <HardHat className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-2xl font-bold text-primary">الدعم الهندسي والإنشائي</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    نقدم حلول إنشاءات متكاملة للمشاريع الكبيرة والصغيرة، بدءاً من التخطيط والتصميم وصولاً إلى التنفيذ
-                    والتسليم بأعلى معايير الجودة والسلامة.
-                  </p>
-                  <ul className="list-disc pr-6 text-medium-text space-y-2">
-                    <li className="flex items-center gap-2">
-                      <Building className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>إدارة مشاريع الإنشاءات والإشراف الهندسي.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Compass className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>التصميم المعماري والداخلي المبتكر.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Ruler className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>تطوير البنية التحتية والمرافق العامة.</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Building Materials & Sourcing */}
-              <Card className="bg-white text-dark-text border-light-border/30 text-right shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <CardHeader className="flex flex-row-reverse items-center gap-4 pb-4">
-                  <Box className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-2xl font-bold text-primary">مواد البناء والتوريد</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    نوفر مجموعة واسعة من مواد البناء عالية الجودة، بما في ذلك الأخشاب والمواد الخشبية المستوردة من أفضل
-                    المصادر العالمية.
-                  </p>
-                  <ul className="list-disc pr-6 text-medium-text space-y-2">
-                    <li className="flex items-center gap-2">
-                      <img src="/wood-icon.png" alt="Wood Icon" className="h-5 w-5 flex-shrink-0" />
-                      <span>أخشاب البناء الإنشائية عالية الجودة.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <img src="/plywood-panel-icon.png" alt="Panel Icon" className="h-5 w-5 flex-shrink-0" />
-                      <span>ألواح الخشب المضغوط (MDF، HDF، Plywood).</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <img src="/flooring-icon.png" alt="Flooring Icon" className="h-5 w-5 flex-shrink-0" />
-                      <span>توريد مواد البناء العامة والتشطيبات.</span>
-                    </li>
-                  </ul>
                 </CardContent>
               </Card>
             </div>
