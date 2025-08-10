@@ -3,15 +3,15 @@ import { Footer } from "@/components/footer"
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-dark-blue-500 text-white">
+    <div className="flex flex-col min-h-[100dvh] bg-light-background text-dark-text">
       <Header />
       <main className="flex-1 container px-4 md:px-6 py-12 md:py-24 lg:py-32 text-right">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-gold-500 mb-8 drop-shadow-lg">
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary mb-8 drop-shadow-lg">
           سياسة الخصوصية
         </h1>
-        <div className="space-y-8 text-gray-200 text-lg">
+        <div className="space-y-8 text-medium-text text-lg">
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">1. مقدمة</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">1. مقدمة</h2>
             <p className="mb-4">
               توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية المعلومات الشخصية التي تقدمها لنا عند استخدامك لموقع
               وشركات شركة رؤى بعيدة. نحن نلتزم بحماية خصوصيتك والامتثال لجميع القوانين واللوائح المعمول بها في المملكة
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">2. المعلومات التي نجمعها</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">2. المعلومات التي نجمعها</h2>
             <p className="mb-4">قد نقوم بجمع أنواع مختلفة من المعلومات منك، بما في ذلك على سبيل المثال لا الحصر:</p>
             <ul className="list-disc pr-6 space-y-2">
               <li>
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">3. كيفية استخدام معلوماتك</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">3. كيفية استخدام معلوماتك</h2>
             <p className="mb-4">نحن نستخدم المعلومات التي نجمعها للأغراض التالية:</p>
             <ul className="list-disc pr-6 space-y-2">
               <li>تقديم خدماتنا وتحسينها.</li>
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">4. مشاركة المعلومات</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">4. مشاركة المعلومات</h2>
             <p className="mb-4">
               نحن لا نبيع أو نتاجر أو نؤجر معلوماتك الشخصية لأطراف ثالثة. قد نشارك معلوماتك مع مقدمي الخدمات الموثوقين
               الذين يساعدوننا في تشغيل موقعنا أو تقديم خدماتنا، شريطة أن يوافقوا على الحفاظ على سرية هذه المعلومات. قد
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">5. أمن البيانات</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">5. أمن البيانات</h2>
             <p className="mb-4">
               نتخذ إجراءات أمنية معقولة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التعديل أو الكشف أو التدمير.
               ومع ذلك، لا توجد طريقة إرسال عبر الإنترنت أو طريقة تخزين إلكتروني آمنة بنسبة 100%، ولا يمكننا ضمان أمنها
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">6. حقوقك</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">6. حقوقك</h2>
             <p className="mb-4">
               لديك الحق في الوصول إلى معلوماتك الشخصية التي نحتفظ بها وتصحيحها أو حذفها. يمكنك ممارسة هذه الحقوق عن طريق
               التواصل معنا.
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">7. التعديلات على سياسة الخصوصية</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">7. التعديلات على سياسة الخصوصية</h2>
             <p className="mb-4">
               قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة، ويعتبر استمرارك في
               استخدام الموقع بعد نشر التعديلات موافقة منك على السياسة المعدلة.
@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-semibold text-gold-400 mb-4">8. اتصل بنا</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-4">8. اتصل بنا</h2>
             <p>
               إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر صفحة "تواصل معنا" أو عبر البريد
               الإلكتروني info@farvisions.net.

@@ -13,7 +13,7 @@ const almarai = Almarai({
 export const metadata: Metadata = {
   title: "شركة رؤى بعيدة",
   description: "حيث التميز هو المعيار",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -23,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
-      <body className={almarai.className}>
+      <body className={`${almarai.className} bg-light-background text-dark-text`}>
         {" "}
-        {/* Apply Almarai font */}
+        {/* Apply Almarai font and new background/text colors */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

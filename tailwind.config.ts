@@ -26,12 +26,12 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "var(--gold)", // Gold for primary actions
-          foreground: "var(--dark-blue)", // Dark blue text on gold
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "var(--dark-blue)", // Dark blue for secondary elements
-          foreground: "var(--gold)", // Gold text on dark blue
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -53,33 +53,14 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom colors
-        "dark-blue": {
-          DEFAULT: "#0A1931", // A deep, rich dark blue
-          50: "#E0E6ED",
-          100: "#B3C0D4",
-          200: "#879BB9",
-          300: "#5A769F",
-          400: "#2E5184",
-          500: "#0A1931", // Base dark blue
-          600: "#081428",
-          700: "#06101F",
-          800: "#040B16",
-          900: "#02070D",
-        },
-        gold: {
-          DEFAULT: "#FFD700", // Standard gold
-          50: "#FFFBE0",
-          100: "#FFF7C2",
-          200: "#FFF2A3",
-          300: "#FFED85",
-          400: "#FFE866",
-          500: "#FFD700", // Base gold
-          600: "#E6C200",
-          700: "#CCAC00",
-          800: "#B39700",
-          900: "#998200",
-        },
+        // New custom colors for the lighter theme and gradient
+        "gradient-blue": "hsl(210 100% 50%)", // Vibrant Blue
+        "gradient-purple": "hsl(270 100% 60%)", // Vibrant Purple
+        "gradient-pink": "hsl(330 100% 70%)", // Vibrant Pink
+        "light-background": "hsl(0 0% 100%)", // White
+        "dark-text": "hsl(0 0% 20%)", // Dark Gray for text
+        "medium-text": "hsl(0 0% 40%)", // Medium Gray for muted text
+        "light-border": "hsl(0 0% 80%)", // Light Gray for borders
       },
       borderRadius: {
         lg: "var(--radius)",
