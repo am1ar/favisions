@@ -1,0 +1,141 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f6f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="oak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DEB887;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkOak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="countertop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F5F5DC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F5DC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="700" width="1200" height="100" fill="#D2B48C"/>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="1200" height="700" fill="#F5F5DC"/>
+  
+  <!-- Upper Cabinets -->
+  <rect x="50" y="100" width="1100" height="200" fill="url(#oak)" stroke="#8B7355" stroke-width="2"/>
+  
+  <!-- Upper Cabinet Doors -->
+  <rect x="70" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="170" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="270" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="370" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="470" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="570" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="670" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="770" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="870" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="970" y="120" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="1070" y="120" width="60" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Upper Cabinet Handles -->
+  <rect x="105" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="205" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="305" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="405" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="505" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="605" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="705" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="805" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="905" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="1005" y="200" width="20" height="2" fill="#FFD700"/>
+  <rect x="1095" y="200" width="20" height="2" fill="#FFD700"/>
+  
+  <!-- Countertop -->
+  <rect x="50" y="350" width="1100" height="30" fill="url(#countertop)" stroke="#8B7355" stroke-width="2"/>
+  
+  <!-- Lower Cabinets -->
+  <rect x="50" y="380" width="1100" height="200" fill="url(#oak)" stroke="#8B7355" stroke-width="2"/>
+  
+  <!-- Lower Cabinet Doors -->
+  <rect x="70" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="170" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="270" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="370" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="470" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="570" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="670" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="770" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="870" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="970" y="400" width="80" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="1070" y="400" width="60" height="160" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Lower Cabinet Handles -->
+  <rect x="105" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="205" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="305" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="405" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="505" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="605" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="705" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="805" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="905" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="1005" y="480" width="20" height="2" fill="#FFD700"/>
+  <rect x="1095" y="480" width="20" height="2" fill="#FFD700"/>
+  
+  <!-- Kitchen Island -->
+  <rect x="400" y="500" width="400" height="150" fill="url(#oak)" stroke="#8B7355" stroke-width="3"/>
+  <rect x="410" y="510" width="380" height="130" fill="url(#countertop)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Island Storage -->
+  <rect x="420" y="520" width="80" height="100" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="520" y="520" width="80" height="100" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="620" y="520" width="80" height="100" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="720" y="520" width="80" height="100" fill="url(#darkOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Island Handles -->
+  <rect x="450" y="570" width="20" height="2" fill="#FFD700"/>
+  <rect x="550" y="570" width="20" height="2" fill="#FFD700"/>
+  <rect x="650" y="570" width="20" height="2" fill="#FFD700"/>
+  <rect x="750" y="570" width="20" height="2" fill="#FFD700"/>
+  
+  <!-- Sink -->
+  <circle cx="600" cy="580" r="25" fill="#C0C0C0" stroke="#808080" stroke-width="2"/>
+  <circle cx="600" cy="580" r="20" fill="#E6E6FA" opacity="0.8"/>
+  
+  <!-- Stove -->
+  <rect x="500" y="540" width="80" height="60" fill="#2F2F2F" stroke="#000000" stroke-width="2"/>
+  <circle cx="520" cy="570" r="8" fill="#FFD700"/>
+  <circle cx="540" cy="570" r="8" fill="#FFD700"/>
+  <circle cx="560" cy="570" r="8" fill="#FFD700"/>
+  <circle cx="580" cy="570" r="8" fill="#FFD700"/>
+  
+  <!-- Refrigerator -->
+  <rect x="50" y="600" width="120" height="200" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="3"/>
+  <rect x="60" y="610" width="100" height="180" fill="#E6F3FF" opacity="0.3"/>
+  
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1200" height="100" fill="#F5F5DC"/>
+  
+  <!-- Ceiling Lights -->
+  <circle cx="200" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="400" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="600" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="800" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="1000" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  
+  <!-- Wood Grain Details -->
+  <path d="M 60 150 Q 80 140 100 150 Q 120 160 140 150 Q 160 140 180 150" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M 60 250 Q 80 240 100 250 Q 120 260 140 250 Q 160 240 180 250" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#8B7355">مطبخ فاخر مع خزائن خشبية طبيعية</text>
+</svg>

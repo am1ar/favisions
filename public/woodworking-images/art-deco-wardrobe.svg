@@ -1,0 +1,106 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f6f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="walnut" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3E2723;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5D4037;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="mirror" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#E6F3FF;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="700" width="1200" height="100" fill="#D2B48C"/>
+  
+  <!-- Main Wardrobe Structure -->
+  <rect x="200" y="150" width="800" height="500" fill="url(#walnut)" stroke="#1B0F00" stroke-width="3"/>
+  
+  <!-- Art Deco Geometric Patterns - Left Side -->
+  <path d="M 220 170 L 300 170 L 300 230 L 220 230 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 220 250 L 300 250 L 300 310 L 220 310 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 220 330 L 300 330 L 300 390 L 220 390 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 220 410 L 300 410 L 300 470 L 220 470 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 220 490 L 300 490 L 300 550 L 220 550 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Art Deco Geometric Patterns - Right Side -->
+  <path d="M 900 170 L 980 170 L 980 230 L 900 230 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 900 250 L 980 250 L 980 310 L 900 310 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 900 330 L 980 330 L 980 390 L 900 390 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 900 410 L 980 410 L 980 470 L 900 470 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 900 490 L 980 490 L 980 550 L 900 550 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Central Mirror with Art Deco Frame -->
+  <rect x="400" y="200" width="400" height="300" fill="url(#mirror)" stroke="url(#gold)" stroke-width="4"/>
+  <rect x="410" y="210" width="380" height="280" fill="#E6F3FF" opacity="0.3"/>
+  
+  <!-- Art Deco Mirror Frame Details -->
+  <path d="M 400 200 L 420 180 L 780 180 L 800 200" fill="url(#gold)" stroke="#1B0F00" stroke-width="2"/>
+  <path d="M 400 500 L 420 520 L 780 520 L 800 500" fill="url(#gold)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Geometric Decorative Elements -->
+  <path d="M 450 180 L 470 160 L 490 180 L 470 200 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 550 180 L 570 160 L 590 180 L 570 200 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 650 180 L 670 160 L 690 180 L 670 200 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  <path d="M 750 180 L 770 160 L 790 180 L 770 200 Z" fill="url(#gold)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Bottom Drawers with Art Deco Pattern -->
+  <rect x="400" y="550" width="400" height="100" fill="url(#walnut)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Drawer Divisions -->
+  <rect x="420" y="570" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="520" y="570" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="620" y="570" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="720" y="570" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Art Deco Drawer Handles -->
+  <rect x="440" y="595" width="40" height="4" fill="url(#gold)"/>
+  <rect x="540" y="595" width="40" height="4" fill="url(#gold)"/>
+  <rect x="640" y="595" width="40" height="4" fill="url(#gold)"/>
+  <rect x="740" y="595" width="40" height="4" fill="url(#gold)"/>
+  
+  <!-- Left Side Drawers -->
+  <rect x="220" y="570" width="200" height="80" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="240" y="590" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="320" y="590" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="240" y="640" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="320" y="640" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Right Side Drawers -->
+  <rect x="780" y="570" width="200" height="80" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="800" y="590" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="880" y="590" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="800" y="640" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="880" y="640" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1200" height="100" fill="#F5F5DC"/>
+  
+  <!-- Art Deco Ceiling Pattern -->
+  <path d="M 100 80 L 150 60 L 200 80 L 150 100 Z" fill="url(#gold)" opacity="0.7"/>
+  <path d="M 300 80 L 350 60 L 400 80 L 350 100 Z" fill="url(#gold)" opacity="0.7"/>
+  <path d="M 500 80 L 550 60 L 600 80 L 550 100 Z" fill="url(#gold)" opacity="0.7"/>
+  <path d="M 700 80 L 750 60 L 800 80 L 750 100 Z" fill="url(#gold)" opacity="0.7"/>
+  <path d="M 900 80 L 950 60 L 1000 80 L 950 100 Z" fill="url(#gold)" opacity="0.7"/>
+  
+  <!-- Wood Grain Details -->
+  <path d="M 230 200 Q 250 190 270 200 Q 290 210 310 200 Q 330 190 350 200" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 230 300 Q 250 290 270 300 Q 290 310 310 300 Q 330 290 350 300" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 230 400 Q 250 390 270 400 Q 290 410 310 400 Q 330 390 350 400" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.4"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1B0F00">خزانة ملابس كلاسيكية مع تصميم آرت ديكو</text>
+</svg>

@@ -1,0 +1,138 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f6f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="walnut" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3E2723;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5D4037;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkWalnut" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1B0F00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2E1A0A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B0F00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="mirror" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#E6F3FF;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="700" width="1200" height="100" fill="#D2B48C"/>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="1200" height="700" fill="#F5F5DC"/>
+  
+  <!-- Classic Wooden Bed -->
+  <rect x="100" y="400" width="300" height="200" fill="url(#walnut)" stroke="#1B0F00" stroke-width="3"/>
+  <rect x="110" y="410" width="280" height="180" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Bed Headboard -->
+  <rect x="100" y="350" width="300" height="50" fill="url(#walnut)" stroke="#1B0F00" stroke-width="2"/>
+  <rect x="110" y="360" width="280" height="30" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Bed Posts -->
+  <rect x="90" y="350" width="20" height="250" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="390" y="350" width="20" height="250" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Bedding -->
+  <rect x="120" y="420" width="260" height="160" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="1"/>
+  <rect x="130" y="430" width="240" height="140" fill="#F0F8FF" opacity="0.8"/>
+  
+  <!-- Pillows -->
+  <rect x="130" y="430" width="60" height="40" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="1"/>
+  <rect x="200" y="430" width="60" height="40" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="1"/>
+  
+  <!-- Classic Vanity Table -->
+  <rect x="500" y="350" width="250" height="250" fill="url(#walnut)" stroke="#1B0F00" stroke-width="3"/>
+  
+  <!-- Vanity Top -->
+  <rect x="510" y="350" width="230" height="30" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Large Classic Mirror -->
+  <rect x="520" y="200" width="210" height="150" fill="url(#mirror)" stroke="url(#gold)" stroke-width="6"/>
+  <rect x="530" y="210" width="190" height="130" fill="#E6F3FF" opacity="0.3"/>
+  
+  <!-- Mirror Frame Details -->
+  <rect x="520" y="200" width="210" height="150" fill="none" stroke="url(#gold)" stroke-width="8"/>
+  
+  <!-- Decorative Corner Elements -->
+  <path d="M 520 200 L 540 180 L 560 200" fill="url(#gold)" stroke="#1B0F00" stroke-width="2"/>
+  <path d="M 670 200 L 690 180 L 710 200" fill="url(#gold)" stroke="#1B0F00" stroke-width="2"/>
+  <path d="M 520 350 L 540 370 L 560 350" fill="url(#gold)" stroke="#1B0F00" stroke-width="2"/>
+  <path d="M 670 350 L 690 370 L 710 350" fill="url(#gold)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Vanity Drawers -->
+  <rect x="520" y="400" width="70" height="180" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="610" y="400" width="70" height="180" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="700" y="400" width="70" height="180" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Drawer Handles -->
+  <rect x="540" y="470" width="30" height="2" fill="url(#gold)"/>
+  <rect x="630" y="470" width="30" height="2" fill="url(#gold)"/>
+  <rect x="720" y="470" width="30" height="2" fill="url(#gold)"/>
+  
+  <!-- Classic Wardrobe -->
+  <rect x="800" y="200" width="300" height="400" fill="url(#walnut)" stroke="#1B0F00" stroke-width="3"/>
+  
+  <!-- Wardrobe Doors -->
+  <rect x="810" y="210" width="130" height="380" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="960" y="210" width="130" height="380" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Door Handles -->
+  <rect x="870" y="390" width="10" height="20" fill="url(#gold)"/>
+  <rect x="1020" y="390" width="10" height="20" fill="url(#gold)"/>
+  
+  <!-- Classic Nightstand -->
+  <rect x="450" y="450" width="120" height="150" fill="url(#walnut)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Nightstand Top -->
+  <rect x="460" y="450" width="100" height="20" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Nightstand Drawer -->
+  <rect x="470" y="480" width="80" height="100" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Drawer Handle -->
+  <rect x="490" y="520" width="40" height="2" fill="url(#gold)"/>
+  
+  <!-- Classic Chair -->
+  <rect x="200" y="300" width="80" height="100" fill="url(#walnut)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Chair Seat -->
+  <rect x="210" y="320" width="60" height="60" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Chair Back -->
+  <rect x="210" y="300" width="60" height="20" fill="url(#darkWalnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Chair Legs -->
+  <rect x="215" y="380" width="8" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="257" y="380" width="8" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1200" height="100" fill="#F5F5DC"/>
+  
+  <!-- Ceiling Lights -->
+  <circle cx="200" cy="80" r="20" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="400" cy="80" r="20" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="600" cy="80" r="20" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="800" cy="80" r="20" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="1000" cy="80" r="20" fill="url(#gold)" opacity="0.6"/>
+  
+  <!-- Wood Grain Details -->
+  <path d="M 110 420 Q 130 410 150 420 Q 170 430 190 420 Q 210 410 230 420" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M 110 500 Q 130 490 150 500 Q 170 510 190 500 Q 210 490 230 500" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1B0F00">غرفة نوم فاخرة مع أثاث خشبي كلاسيكي</text>
+</svg>

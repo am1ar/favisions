@@ -4,13 +4,15 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY || "re_YOUR_RESEND_API_KEY")
 
-export async function submitContactForm(prevState: any, formData: FormData) {
-  const name = formData.get("name") as string
+export async function submitContactForm(formData: FormData) {
+  const firstName = formData.get("firstName") as string
+  const lastName = formData.get("lastName") as string
   const email = formData.get("email") as string
+  const phone = formData.get("phone") as string
   const subject = formData.get("subject") as string
   const message = formData.get("message") as string
 
-  if (!name || !email || !subject || !message) {
+  if (!firstName || !lastName || !email || !subject || !message) {
     return { success: false, message: "الرجاء تعبئة جميع الحقول المطلوبة." }
   }
 
@@ -21,7 +23,7 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   try {
     console.log("Attempting to send email...")
     console.log(`To: ammaralboraei@gmail.com`)
-    console.log(`From: ${email} (${name})`)
+    console.log(`From: ${email} (${firstName} ${lastName})`)
     console.log(`Subject: ${subject}`)
     console.log(`Message: ${message}`)
 
@@ -31,8 +33,9 @@ export async function submitContactForm(prevState: any, formData: FormData) {
       to: 'ammaralboraei@gmail.com',
       subject: `رسالة من شركة رؤى بعيدة: ${subject}`,
       html: `
-        <p><strong>الاسم:</strong> ${name}</p>
+        <p><strong>الاسم:</strong> ${firstName} ${lastName}</p>
         <p><strong>البريد الإلكتروني:</strong> ${email}</p>
+        <p><strong>رقم الهاتف:</strong> ${phone || 'غير محدد'}</p>
         <p><strong>الموضوع:</strong> ${subject}</p>
         <p><strong>الرسالة:</strong></p>
         <p>${message}</p>

@@ -1,0 +1,129 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f6f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="walnut" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3E2723;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5D4037;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warmLED" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#FF8C42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.9" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="700" width="1200" height="100" fill="#D2B48C"/>
+  
+  <!-- Main Wardrobe Structure -->
+  <rect x="200" y="150" width="800" height="500" fill="url(#walnut)" stroke="#1B0F00" stroke-width="3"/>
+  
+  <!-- Left Section - Warm LED Colors -->
+  <rect x="220" y="170" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="220" y="250" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="220" y="330" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="220" y="410" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="220" y="490" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="220" y="570" width="200" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Center Section - Warm LED Colors -->
+  <rect x="440" y="170" width="320" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="250" width="320" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="330" width="320" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="410" width="320" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="490" width="320" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="570" width="320" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Right Section - Warm LED Colors -->
+  <rect x="780" y="170" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="780" y="250" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="780" y="330" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="780" y="410" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="780" y="490" width="200" height="60" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="780" y="570" width="200" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Central Mirror with Warm LED Frame -->
+  <rect x="500" y="200" width="200" height="250" fill="url(#glow)" stroke="url(#warmLED)" stroke-width="4"/>
+  <rect x="510" y="210" width="180" height="230" fill="#E6F3FF" opacity="0.3"/>
+  
+  <!-- Warm LED Control Panel -->
+  <rect x="450" y="650" width="300" height="80" fill="url(#walnut)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Control Buttons -->
+  <circle cx="500" cy="690" r="15" fill="url(#warmLED)" opacity="0.9"/>
+  <circle cx="550" cy="690" r="15" fill="url(#warmLED)" opacity="0.9"/>
+  <circle cx="600" cy="690" r="15" fill="url(#warmLED)" opacity="0.9"/>
+  <circle cx="650" cy="690" r="15" fill="#FFD700" opacity="0.9"/>
+  <circle cx="700" cy="690" r="15" fill="#00FF00" opacity="0.9"/>
+  
+  <!-- Smart Control Display -->
+  <rect x="520" y="670" width="200" height="30" fill="#000000" opacity="0.8"/>
+  <rect x="530" y="675" width="180" height="20" fill="#FF8C42" opacity="0.6"/>
+  
+  <!-- Warm LED Strips Around Mirror -->
+  <rect x="440" y="180" width="320" height="8" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="512" width="320" height="8" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="440" y="200" width="8" height="300" fill="url(#warmLED)" opacity="0.9"/>
+  <rect x="752" y="200" width="8" height="300" fill="url(#warmLED)" opacity="0.9"/>
+  
+  <!-- Bottom Drawers -->
+  <rect x="400" y="650" width="400" height="100" fill="url(#walnut)" stroke="#1B0F00" stroke-width="2"/>
+  
+  <!-- Drawer Divisions -->
+  <rect x="420" y="670" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="520" y="670" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="620" y="670" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="720" y="670" width="80" height="60" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Drawer Handles -->
+  <rect x="440" y="695" width="40" height="4" fill="#FFD700"/>
+  <rect x="540" y="695" width="40" height="4" fill="#FFD700"/>
+  <rect x="640" y="695" width="40" height="4" fill="#FFD700"/>
+  <rect x="740" y="695" width="40" height="4" fill="#FFD700"/>
+  
+  <!-- Left Side Drawers -->
+  <rect x="220" y="650" width="200" height="100" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="240" y="670" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="320" y="670" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="240" y="720" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="320" y="720" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Right Side Drawers -->
+  <rect x="780" y="650" width="200" height="100" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="800" y="670" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="880" y="670" width="60" height="40" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="800" y="720" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  <rect x="880" y="720" width="60" height="20" fill="url(#walnut)" stroke="#1B0F00" stroke-width="1"/>
+  
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1200" height="100" fill="#F5F5DC"/>
+  
+  <!-- Ceiling Lights -->
+  <circle cx="200" cy="80" r="20" fill="url(#warmLED)" opacity="0.6"/>
+  <circle cx="400" cy="80" r="20" fill="url(#warmLED)" opacity="0.6"/>
+  <circle cx="600" cy="80" r="20" fill="url(#warmLED)" opacity="0.6"/>
+  <circle cx="800" cy="80" r="20" fill="url(#warmLED)" opacity="0.6"/>
+  <circle cx="1000" cy="80" r="20" fill="url(#warmLED)" opacity="0.6"/>
+  
+  <!-- Warm Glow Effect -->
+  <circle cx="600" cy="400" r="120" fill="none" stroke="url(#warmLED)" stroke-width="4" opacity="0.3"/>
+  
+  <!-- Wood Grain Details -->
+  <path d="M 230 200 Q 250 190 270 200 Q 290 210 310 200 Q 330 190 350 200" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 230 300 Q 250 290 270 300 Q 290 310 310 300 Q 330 290 350 300" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 230 400 Q 250 390 270 400 Q 290 410 310 400 Q 330 390 350 400" stroke="#1B0F00" stroke-width="1" fill="none" opacity="0.4"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1B0F00">خزانة ملابس فاخرة مع إضاءة دافئة</text>
+</svg>

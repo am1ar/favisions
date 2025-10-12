@@ -1,0 +1,74 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E6C08C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4A574;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F4F8;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#D1E7ED;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#B8D9E2;stop-opacity:0.7" />
+    </linearGradient>
+    <filter id="glassEffect">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.3 0"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F9FA"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="280" width="400" height="20" fill="#E9ECEF"/>
+  
+  <!-- Wardrobe Base -->
+  <rect x="50" y="200" width="300" height="80" fill="url(#woodGradient)" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Wardrobe Doors -->
+  <!-- Left Door -->
+  <rect x="60" y="120" width="140" height="80" fill="url(#glassGradient)" stroke="#8B4513" stroke-width="2" filter="url(#glassEffect)"/>
+  <rect x="70" y="130" width="120" height="60" fill="url(#glassGradient)" opacity="0.6"/>
+  
+  <!-- Right Door -->
+  <rect x="200" y="120" width="140" height="80" fill="url(#glassGradient)" stroke="#8B4513" stroke-width="2" filter="url(#glassEffect)"/>
+  <rect x="210" y="130" width="120" height="60" fill="url(#glassGradient)" opacity="0.6"/>
+  
+  <!-- Door Handles -->
+  <circle cx="180" cy="160" r="8" fill="#8B4513"/>
+  <circle cx="220" cy="160" r="8" fill="#8B4513"/>
+  
+  <!-- Wardrobe Top -->
+  <rect x="40" y="100" width="320" height="20" fill="url(#woodGradient)" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Interior Shelves -->
+  <rect x="70" y="140" width="120" height="4" fill="#8B4513" opacity="0.3"/>
+  <rect x="210" y="140" width="120" height="4" fill="#8B4513" opacity="0.3"/>
+  <rect x="70" y="170" width="120" height="4" fill="#8B4513" opacity="0.3"/>
+  <rect x="210" y="170" width="120" height="4" fill="#8B4513" opacity="0.3"/>
+  
+  <!-- Hanging Rods -->
+  <line x1="130" y1="150" x2="130" y2="190" stroke="#8B4513" stroke-width="3" opacity="0.5"/>
+  <line x1="270" y1="150" x2="270" y2="190" stroke="#8B4513" stroke-width="3" opacity="0.5"/>
+  
+  <!-- LED Lighting -->
+  <rect x="40" y="95" width="320" height="5" fill="#FFD700" opacity="0.8"/>
+  <circle cx="60" cy="97.5" r="2" fill="#FFD700"/>
+  <circle cx="120" cy="97.5" r="2" fill="#FFD700"/>
+  <circle cx="180" cy="97.5" r="2" fill="#FFD700"/>
+  <circle cx="240" cy="97.5" r="2" fill="#FFD700"/>
+  <circle cx="300" cy="97.5" r="2" fill="#FFD700"/>
+  <circle cx="360" cy="97.5" r="2" fill="#FFD700"/>
+  
+  <!-- Decorative Elements -->
+  <rect x="45" y="105" width="310" height="10" fill="url(#woodGradient)" opacity="0.7"/>
+  <rect x="50" y="195" width="300" height="5" fill="url(#woodGradient)" opacity="0.7"/>
+  
+  <!-- Text Labels -->
+  <text x="200" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2C3E50">
+    خزانة ملابس فاخرة مع زجاج معتم
+  </text>
+  <text x="200" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7F8C8D">
+    Frosted Glass Wardrobe
+  </text>
+</svg>

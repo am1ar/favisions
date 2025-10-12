@@ -1,0 +1,130 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f6f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="oak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DEB887;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightOak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFF8DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5DEB3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F5F5DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6E6FA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F0F8FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="700" width="1200" height="100" fill="#D2B48C"/>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="1200" height="700" fill="url(#wall)"/>
+  
+  <!-- Wall Tiles -->
+  <rect x="0" y="0" width="1200" height="700" fill="url(#tile)" opacity="0.3"/>
+  
+  <!-- Integrated Vanity Unit -->
+  <rect x="100" y="300" width="400" height="300" fill="url(#oak)" stroke="#8B7355" stroke-width="3"/>
+  
+  <!-- Vanity Top -->
+  <rect x="110" y="300" width="380" height="30" fill="url(#lightOak)" stroke="#8B7355" stroke-width="2"/>
+  
+  <!-- Sink -->
+  <circle cx="300" cy="340" r="35" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="3"/>
+  <circle cx="300" cy="340" r="30" fill="#E6F3FF" opacity="0.8"/>
+  
+  <!-- Faucet -->
+  <rect x="295" y="280" width="10" height="40" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  <circle cx="300" cy="275" r="8" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Vanity Doors -->
+  <rect x="120" y="350" width="80" height="200" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="220" y="350" width="80" height="200" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="320" y="350" width="80" height="200" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Door Handles -->
+  <rect x="150" y="440" width="20" height="2" fill="#FFD700"/>
+  <rect x="250" y="440" width="20" height="2" fill="#FFD700"/>
+  <rect x="350" y="440" width="20" height="2" fill="#FFD700"/>
+  
+  <!-- Mirror Cabinet -->
+  <rect x="600" y="200" width="300" height="400" fill="url(#oak)" stroke="#8B7355" stroke-width="3"/>
+  
+  <!-- Mirror -->
+  <rect x="610" y="210" width="280" height="300" fill="#E6F3FF" opacity="0.6"/>
+  <rect x="620" y="220" width="260" height="280" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Mirror Frame -->
+  <rect x="600" y="200" width="300" height="400" fill="none" stroke="#FFD700" stroke-width="4"/>
+  
+  <!-- Mirror Cabinet Doors -->
+  <rect x="610" y="530" width="130" height="60" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  <rect x="760" y="530" width="130" height="60" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Cabinet Handles -->
+  <rect x="650" y="555" width="50" height="2" fill="#FFD700"/>
+  <rect x="800" y="555" width="50" height="2" fill="#FFD700"/>
+  
+  <!-- Towel Rack -->
+  <rect x="950" y="300" width="200" height="100" fill="url(#oak)" stroke="#8B7355" stroke-width="2"/>
+  <rect x="960" y="310" width="180" height="80" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Towel Bars -->
+  <rect x="970" y="330" width="160" height="3" fill="#FFD700"/>
+  <rect x="970" y="350" width="160" height="3" fill="#FFD700"/>
+  
+  <!-- Towels -->
+  <rect x="980" y="340" width="30" height="40" fill="#87CEEB" opacity="0.8"/>
+  <rect x="1020" y="340" width="30" height="40" fill="#98FB98" opacity="0.8"/>
+  <rect x="1060" y="340" width="30" height="40" fill="#DDA0DD" opacity="0.8"/>
+  
+  <!-- Toilet Paper Holder -->
+  <rect x="950" y="420" width="200" height="80" fill="url(#oak)" stroke="#8B7355" stroke-width="2"/>
+  <rect x="960" y="430" width="180" height="60" fill="url(#lightOak)" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Toilet Paper -->
+  <circle cx="1050" cy="460" r="15" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="1"/>
+  
+  <!-- Shower Area -->
+  <rect x="100" y="100" width="300" height="200" fill="url(#tile)" stroke="#8B7355" stroke-width="2"/>
+  
+  <!-- Shower Door -->
+  <rect x="110" y="110" width="280" height="180" fill="url(#tile)" opacity="0.6" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Shower Head -->
+  <circle cx="250" cy="120" r="15" fill="#C0C0C0" stroke="#808080" stroke-width="2"/>
+  
+  <!-- Shower Controls -->
+  <rect x="240" y="140" width="20" height="30" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1200" height="100" fill="#F5F5DC"/>
+  
+  <!-- Ceiling Lights -->
+  <circle cx="200" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="400" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="600" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="800" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  <circle cx="1000" cy="80" r="20" fill="#FFD700" opacity="0.6"/>
+  
+  <!-- Wood Grain Details -->
+  <path d="M 120 400 Q 140 390 160 400 Q 180 410 200 400 Q 220 390 240 400" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M 120 500 Q 140 490 160 500 Q 180 510 200 500 Q 220 490 240 500" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#8B7355">حمام فاخر مع خزائن خشبية طبيعية</text>
+</svg>
