@@ -40,7 +40,13 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <form action={submitContactForm} className="space-y-6">
+                <form
+                  action={async (formData) => {
+                    // Invoke server action but do not return its value to satisfy React's FormAction type
+                    await submitContactForm(formData)
+                  }}
+                  className="space-y-6"
+                >
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-luxury-navy font-semibold">
