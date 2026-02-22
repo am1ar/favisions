@@ -15,12 +15,12 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0A2E5A", // Navy
-          foreground: "#F8F5F0", // Ivory
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#D4AF37", // Gold
-          foreground: "#0A2E5A", // Navy
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -42,28 +42,51 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // New luxury color scheme
-        "luxury-navy": "#0A2E5A",
-        "luxury-gold": "#D4AF37",
-        "luxury-ivory": "#F8F5F0",
-        "luxury-gold-light": "#E5C158",
-        "luxury-gold-dark": "#B8941F",
-        "luxury-navy-light": "#1A4A7A",
-        "luxury-navy-dark": "#051A3A",
-        "luxury-ivory-dark": "#E8E0D0",
-        "luxury-silver": "#C0C0C0",
-        "luxury-bronze": "#CD7F32",
-        // Background colors
-        "light-background": "#F8F5F0", // Ivory
-        "dark-text": "#0A2E5A", // Navy
-        "medium-text": "#1A4A7A", // Navy Light
-        "light-border": "#E8E0D0", // Ivory Dark
-        "accent-text": "#D4AF37", // Gold
+        /* Brand colors for direct use */
+        teal: {
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          200: "#99f6e4",
+          300: "#5eead4",
+          400: "#2dd4bf",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          800: "#115e59",
+          900: "#134e4a",
+        },
+        coral: {
+          50: "#fef2f0",
+          100: "#fde3df",
+          200: "#fbc8c0",
+          300: "#f5a293",
+          400: "#e8796a",
+          500: "#dc5844",
+          600: "#c9402d",
+          700: "#a93322",
+          800: "#8c2d1f",
+          900: "#742a20",
+        },
+        charcoal: {
+          50: "#eeeef2",
+          100: "#d5d5e0",
+          200: "#ababc1",
+          300: "#8181a2",
+          400: "#5a5a80",
+          500: "#3a3a5e",
+          600: "#2d2d4a",
+          700: "#1a1a2e",
+          800: "#121220",
+          900: "#0a0a14",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-almarai)", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -78,37 +101,43 @@ const config: Config = {
           from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(24px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
         "slide-in": {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
         },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+        "slide-down": {
+          from: { opacity: "0", transform: "translateY(-8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
-        slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
+        "scale-in": {
+          from: { opacity: "0", transform: "scale(0.96)" },
+          to: { opacity: "1", transform: "scale(1)" },
         },
-        bounceGentle: {
+        "bounce-gentle": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-8px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out",
+        "fade-in": "fade-in 0.6s ease-out both",
+        "fade-in-up": "fade-in-up 0.6s ease-out both",
         "slide-in": "slide-in 0.3s ease-out",
-        // Removed duplicate key; using kebab-case variant above
-        "slide-up": "slideUp 0.5s ease-out",
-        "bounce-gentle": "bounceGentle 2s infinite",
+        "slide-down": "slide-down 0.25s ease-out both",
+        "scale-in": "scale-in 0.4s ease-out both",
+        "bounce-gentle": "bounce-gentle 2s infinite",
       },
       backgroundImage: {
-        "luxury-gradient": "linear-gradient(135deg, #0A2E5A 0%, #1A4A7A 50%, #D4AF37 100%)",
-        "gold-gradient": "linear-gradient(135deg, #D4AF37 0%, #E5C158 50%, #F8F5F0 100%)",
-        "navy-gradient": "linear-gradient(135deg, #0A2E5A 0%, #051A3A 100%)",
-        "metallic": "linear-gradient(135deg, #C0C0C0 0%, #E5E4E2 50%, #C0C0C0 100%)",
+        "brand-gradient": "linear-gradient(135deg, #1A1A2E 0%, #2d2d4a 50%, #0d9488 100%)",
+        "teal-gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%)",
+        "coral-gradient": "linear-gradient(135deg, #e8796a 0%, #dc5844 100%)",
+        "warm-gradient": "linear-gradient(135deg, #FAF8F5 0%, #f0ece6 100%)",
+        "hero-gradient": "linear-gradient(160deg, #1A1A2E 0%, #2d2d4a 40%, #134e4a 100%)",
       },
     },
   },

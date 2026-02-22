@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Almarai } from "next/font/google" // Import Almarai font
+import { Almarai } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-// Configure Almarai font
 const almarai = Almarai({
   subsets: ["arabic"],
-  weight: ["300", "400", "700", "800"], // Specify desired weights
+  weight: ["300", "400", "700", "800"],
+  variable: "--font-almarai",
 })
 
 export const metadata: Metadata = {
@@ -135,7 +135,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${almarai.className} bg-light-background text-dark-text`}>
+      <body className={`${almarai.variable} font-sans bg-background text-foreground antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
