@@ -1,287 +1,199 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Building2, Palette, Hammer, Shield, Users, Award, Star, CheckCircle, TreePine, Laptop, Database, Truck } from "lucide-react"
+import { Building2, PaintBucket, Hammer, Monitor, Truck, BarChart3, Award, Shield, Users, Star, CheckCircle, ArrowLeft } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
+const services = [
+  {
+    href: "/construction-services",
+    icon: Building2,
+    title: "خدمات الإنشاءات",
+    desc: "خدمات إنشاءات متكاملة تشمل المباني السكنية والتجارية",
+    features: ["الإنشاءات السكنية", "الإنشاءات التجارية", "الصيانة والإصلاح"],
+  },
+  {
+    href: "/finishes",
+    icon: PaintBucket,
+    title: "خدمات التشطيبات",
+    desc: "تشطيبات فاخرة ومتطورة للجدران والأرضيات والأسقف",
+    features: ["تشطيبات الجدران", "تشطيبات الأرضيات", "تشطيبات الأسقف"],
+  },
+  {
+    href: "/woodworking-services",
+    icon: Hammer,
+    title: "خدمات النجارة",
+    desc: "نجارة فاخرة باستخدام أجود أنواع الأخشاب الطبيعية",
+    features: ["أنواع الأخشاب الفاخرة", "تقنيات التشطيب المتطورة", "أثاث مخصص"],
+  },
+  {
+    href: "/it-services",
+    icon: Monitor,
+    title: "خدمات تقنية المعلومات",
+    desc: "تطوير البرمجيات وتحليل البيانات وأمن المعلومات",
+    features: ["تطوير البرمجيات", "تحليل البيانات", "أمن المعلومات"],
+  },
+  {
+    href: "/logistics-services",
+    icon: Truck,
+    title: "الخدمات اللوجستية",
+    desc: "خدمات نقل وإدارة مخزون وتطوير أنظمة سلسلة التوريد",
+    features: ["خدمات النقل", "إدارة المخزون", "تحسين العمليات"],
+  },
+  {
+    href: "/data-analytics",
+    icon: BarChart3,
+    title: "تحليل البيانات",
+    desc: "تحليل متقدم للبيانات واستخراج الرؤى والتنبؤات",
+    features: ["تحليل إحصائي", "تقارير تفصيلية", "تنبؤات مستقبلية"],
+  },
+]
+
+const stats = [
+  { value: "+15", label: "سنوات خبرة" },
+  { value: "+500", label: "مشروع منجز" },
+  { value: "+200", label: "عميل راضٍ" },
+  { value: "24/7", label: "دعم فني" },
+]
+
+const values = [
+  { icon: Award, title: "التميز", desc: "نسعى دائماً للتميز في جميع خدماتنا، مع التركيز على الجودة العالية والابتكار" },
+  { icon: Shield, title: "الموثوقية", desc: "نلتزم بمواعيدنا ونضمن لكم جودة عالية في جميع مراحل العمل" },
+  { icon: Users, title: "خدمة العملاء", desc: "نضع رضاكم في المقام الأول ونقدم لكم خدمة متميزة ومخصصة" },
+]
+
+const excellence = [
+  { icon: Shield, title: "ضمان حتى 5 سنوات", desc: "نضمن لكم جودة عالية في جميع أعمالنا مع ضمان شامل حتى 5 سنوات" },
+  { icon: Award, title: "شهادات الفريق", desc: "فريق عمل محترف ومؤهل مع شهادات معتمدة في جميع التخصصات" },
+  { icon: Star, title: "شركاء المواد", desc: "نتعامل مع أفضل موردي المواد وأكثرهم موثوقية في السوق" },
+]
+
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-luxury-ivory text-dark-text">
+    <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <Header />
       <main className="flex-1 pt-20">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-luxury-gradient text-luxury-ivory relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="container mx-auto px-6 md:px-8 lg:px-12 text-right relative z-10">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-luxury-ivory mb-6 drop-shadow-lg">
-              شركة رؤى بعيدة
-            </h1>
-            <p className="max-w-[800px] text-lg md:text-xl/relaxed lg:text-2xl/relaxed text-luxury-ivory mb-8">
-              نقدم خدمات متكاملة في الإنشاءات والتشطيبات والنجارة الفاخرة،
-              بالإضافة إلى خدمات تقنية المعلومات وتقديم الخدمات اللوجستية وتطوير أنظمة سلسلة التوريد.
-            </p>
-            <div className="flex justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-luxury-gold text-black hover:bg-luxury-gold-light px-8 py-4 text-lg font-semibold rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <Link href="/services">استكشف خدماتنا</Link>
-              </Button>
+        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-hero-gradient overflow-hidden">
+          <div className="absolute inset-0 gradient-mesh-hero opacity-60" />
+          {/* Decorative shapes */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-20 w-96 h-96 bg-coral-400/8 rounded-full blur-3xl" />
+
+          <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-teal-300 text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
+                شريكك الاستراتيجي في المملكة العربية السعودية
+              </div>
+
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 text-balance leading-tight">
+                شركة رؤى بعيدة
+              </h1>
+
+              <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-2xl">
+                نقدم خدمات متكاملة في الإنشاءات والتشطيبات والنجارة الفاخرة،
+                بالإضافة إلى خدمات تقنية المعلومات وتقديم الخدمات اللوجستية وتطوير أنظمة سلسلة التوريد.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="/services">استكشف خدماتنا</Link>
+                </Button>
+                <Button asChild size="lg" variant="ghost" className="text-white border border-white/20 hover:bg-white/10 hover:text-white">
+                  <Link href="/contact">
+                    تواصل معنا
+                    <ArrowLeft className="h-4 w-4 mr-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="relative -mt-12 z-20 px-6 md:px-8 lg:px-12">
+          <div className="container mx-auto">
+            <div className="glass-card rounded-2xl p-8 md:p-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, i) => (
+                  <div key={i} className="text-center">
+                    <div className="text-3xl md:text-4xl font-extrabold text-teal-600 mb-1">{stat.value}</div>
+                    <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Core Values Section */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-luxury-ivory">
+        <section className="w-full py-20 md:py-28">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-16 text-luxury-navy">
-              قيمنا الأساسية
-            </h2>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground mb-4 text-balance">
+                قيمنا الأساسية
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+                القيم التي نؤمن بها وتوجه كل خطوة في مسيرتنا المهنية
+              </p>
+            </div>
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center mx-auto">
-                  <Award className="h-10 w-10 text-luxury-navy" />
+              {values.map((item, i) => (
+                <div key={i} className="text-center group">
+                  <div className="w-16 h-16 rounded-2xl bg-teal-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-teal-100 transition-colors duration-300">
+                    <item.icon className="h-8 w-8 text-teal-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold text-luxury-navy">التميز</h3>
-                <p className="text-medium-text">
-                  نسعى دائماً للتميز في جميع خدماتنا، مع التركيز على الجودة العالية والابتكار
-                </p>
-              </div>
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center mx-auto">
-                  <Shield className="h-10 w-10 text-luxury-navy" />
-                </div>
-                <h3 className="text-xl font-bold text-luxury-navy">الموثوقية</h3>
-                <p className="text-medium-text">
-                  نلتزم بمواعيدنا ونضمن لكم جودة عالية في جميع مراحل العمل
-                </p>
-              </div>
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center mx-auto">
-                  <Users className="h-10 w-10 text-luxury-navy" />
-                </div>
-                <h3 className="text-xl font-bold text-luxury-navy">خدمة العملاء</h3>
-                <p className="text-medium-text">
-                  نضع رضاكم في المقام الأول ونقدم لكم خدمة متميزة ومخصصة
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Services Overview Section */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-luxury-navy text-luxury-ivory">
+        <section className="w-full py-20 md:py-28 bg-charcoal-700 text-white">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-16 text-luxury-ivory">
-              نظرة عامة على خدماتنا
-            </h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="bg-white text-dark-text border-luxury-gold/30 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-luxury-gold to-luxury-gold-light rounded-full flex items-center justify-center">
-                    <Building2 className="h-10 w-10 text-luxury-navy" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-luxury-navy">خدمات الإنشاءات</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    خدمات إنشاءات متكاملة تشمل المباني السكنية والتجارية
-                  </p>
-                  <div className="space-y-2 text-sm text-medium-text">
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>الإنشاءات السكنية</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>الإنشاءات التجارية</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>الصيانة والإصلاح</span>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <Link href="/construction-services" className="text-luxury-gold hover:text-luxury-gold-dark font-semibold">
-                      اقرأ المزيد →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white text-dark-text border-luxury-gold/30 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-luxury-gold to-luxury-gold-light rounded-full flex items-center justify-center">
-                    <Palette className="h-10 w-10 text-luxury-navy" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-luxury-navy">خدمات التشطيبات</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    تشطيبات فاخرة ومتطورة للجدران والأرضيات والأسقف
-                  </p>
-                  <div className="space-y-2 text-sm text-medium-text">
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تشطيبات الجدران</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تشطيبات الأرضيات</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تشطيبات الأسقف</span>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <Link href="/finishes" className="text-luxury-gold hover:text-luxury-gold-dark font-semibold">
-                      اقرأ المزيد →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white text-dark-text border-luxury-gold/30 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-luxury-gold to-luxury-gold-light rounded-full flex items-center justify-center">
-                    <TreePine className="h-10 w-10 text-luxury-navy" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-luxury-navy">خدمات النجارة</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    نجارة فاخرة باستخدام أجود أنواع الأخشاب الطبيعية
-                  </p>
-                  <div className="space-y-2 text-sm text-medium-text">
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>أنواع الأخشاب الفاخرة</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تقنيات التشطيب المتطورة</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>أثاث مخصص</span>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <Link href="/woodworking-services" className="text-luxury-gold hover:text-luxury-gold-dark font-semibold">
-                      اقرأ المزيد →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white text-dark-text border-luxury-gold/30 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-luxury-gold to-luxury-gold-light rounded-full flex items-center justify-center">
-                    <Laptop className="h-10 w-10 text-luxury-navy" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-luxury-navy">خدمات تقنية المعلومات</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    تطوير البرمجيات وتحليل البيانات وأمن المعلومات
-                  </p>
-                  <div className="space-y-2 text-sm text-medium-text">
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تطوير البرمجيات</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تحليل البيانات</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>أمن المعلومات</span>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <Link href="/it-services" className="text-luxury-gold hover:text-luxury-gold-dark font-semibold">
-                      اقرأ المزيد →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white text-dark-text border-luxury-gold/30 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-luxury-gold to-luxury-gold-light rounded-full flex items-center justify-center">
-                    <Truck className="h-10 w-10 text-luxury-navy" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-luxury-navy">الخدمات اللوجستية</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    خدمات نقل وإدارة مخزون وتطوير أنظمة سلسلة التوريد
-                  </p>
-                  <div className="space-y-2 text-sm text-medium-text">
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>خدمات النقل</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>إدارة المخزون</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تحسين العمليات</span>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <Link href="/logistics-services" className="text-luxury-gold hover:text-luxury-gold-dark font-semibold">
-                      اقرأ المزيد →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white text-dark-text border-luxury-gold/30 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="flex flex-col items-center gap-4 pb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-luxury-gold to-luxury-gold-light rounded-full flex items-center justify-center">
-                    <Database className="h-10 w-10 text-luxury-navy" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-luxury-navy">تحليل البيانات</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-medium-text mb-4">
-                    تحليل متقدم للبيانات واستخراج الرؤى والتنبؤات
-                  </p>
-                  <div className="space-y-2 text-sm text-medium-text">
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تحليل إحصائي</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تقارير تفصيلية</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <CheckCircle className="h-4 w-4 text-luxury-gold" />
-                      <span>تنبؤات مستقبلية</span>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <Link href="/data-analytics" className="text-luxury-gold hover:text-luxury-gold-dark font-semibold">
-                      اقرأ المزيد →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white mb-4 text-balance">
+                نظرة عامة على خدماتنا
+              </h2>
+              <p className="text-white/60 text-lg max-w-xl mx-auto">
+                حلول شاملة ومتكاملة تلبي احتياجاتكم المختلفة
+              </p>
             </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((service) => (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="group block rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-teal-500/15 flex items-center justify-center mb-4 group-hover:bg-teal-500/25 transition-colors">
+                    <service.icon className="h-6 w-6 text-teal-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-white/50 text-sm mb-4 leading-relaxed">{service.desc}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-white/60">
+                        <CheckCircle className="h-3.5 w-3.5 text-teal-400 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-5 flex items-center gap-2 text-teal-400 text-sm font-medium group-hover:gap-3 transition-all">
+                    اقرأ المزيد
+                    <ArrowLeft className="h-3.5 w-3.5" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+
             <div className="text-center mt-12">
-              <Button
-                asChild
-                size="lg"
-                className="bg-luxury-gold text-black hover:bg-luxury-gold-light px-8 py-4 text-lg font-semibold rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
+              <Button asChild size="lg" variant="secondary">
                 <Link href="/services">استكشف جميع الخدمات</Link>
               </Button>
             </div>
@@ -289,60 +201,46 @@ export default function HomePage() {
         </section>
 
         {/* Vision of Excellence Section */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-luxury-ivory">
+        <section className="w-full py-20 md:py-28">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-16 text-luxury-navy">
-              رؤية التميز
-            </h2>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground mb-4 text-balance">
+                رؤية التميز
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+                معايير عالية وجودة استثنائية في كل مشروع
+              </p>
+            </div>
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center mx-auto">
-                  <Shield className="h-10 w-10 text-luxury-navy" />
+              {excellence.map((item, i) => (
+                <div key={i} className="glass-card rounded-2xl p-8 text-center hover:-translate-y-1 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-coral-50 flex items-center justify-center mx-auto mb-5">
+                    <item.icon className="h-7 w-7 text-coral-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold text-luxury-navy">ضمان حتى 5 سنوات</h3>
-                <p className="text-medium-text">
-                  نضمن لكم جودة عالية في جميع أعمالنا مع ضمان شامل حتى 5 سنوات
-                </p>
-              </div>
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center mx-auto">
-                  <Award className="h-10 w-10 text-luxury-navy" />
-                </div>
-                <h3 className="text-xl font-bold text-luxury-navy">شهادات الفريق</h3>
-                <p className="text-medium-text">
-                  فريق عمل محترف ومؤهل مع شهادات معتمدة في جميع التخصصات
-                </p>
-              </div>
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-luxury-gold rounded-full flex items-center justify-center mx-auto">
-                  <Star className="h-10 w-10 text-luxury-navy" />
-                </div>
-                <h3 className="text-xl font-bold text-luxury-navy">شركاء المواد</h3>
-                <p className="text-medium-text">
-                  نتعامل مع أفضل موردي المواد وأكثرهم موثوقية في السوق
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-luxury-navy text-luxury-ivory">
+        <section className="w-full py-20 md:py-28 bg-muted">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
-            <div className="text-center space-y-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-luxury-ivory">
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground mb-4 text-balance">
                 ابدأ مشروعك معنا
               </h2>
-              <p className="max-w-2xl mx-auto text-lg text-luxury-ivory/80">
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                 تواصل معنا اليوم للحصول على استشارة مجانية وتقدير سعر لمشروعك
               </p>
-              <div className="flex justify-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-luxury-gold text-black hover:bg-luxury-gold-light px-8 py-4 text-lg font-semibold rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105"
-                >
+              <div className="flex justify-center gap-4 flex-wrap">
+                <Button asChild size="lg" variant="secondary">
                   <Link href="/contact">احصل على استشارة مجانية</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="/project-workflow">رحلة المشروع</Link>
                 </Button>
               </div>
             </div>
