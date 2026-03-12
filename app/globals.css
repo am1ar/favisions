@@ -253,3 +253,107 @@
     radial-gradient(ellipse at 30% 40%, rgba(13, 148, 136, 0.1) 0%, transparent 60%),
     radial-gradient(ellipse at 70% 60%, rgba(232, 121, 106, 0.08) 0%, transparent 60%);
 }
+
+/* ========================================
+   Legacy Color Classes (for backward compatibility)
+   These map to the current design system tokens
+   ======================================== */
+@layer utilities {
+  /* Background colors */
+  .bg-luxury-ivory {
+    @apply bg-background;
+  }
+  .bg-luxury-navy {
+    @apply bg-charcoal-700;
+  }
+  .bg-luxury-gold {
+    @apply bg-teal-600;
+  }
+  .bg-luxury-gold-light {
+    @apply bg-teal-500;
+  }
+  .bg-luxury-gradient {
+    background: linear-gradient(160deg, #1A1A2E 0%, #2d2d4a 40%, #134e4a 100%);
+  }
+
+  /* Text colors */
+  .text-luxury-ivory {
+    @apply text-white;
+  }
+  .text-luxury-navy {
+    @apply text-foreground;
+  }
+  .text-luxury-gold {
+    @apply text-teal-600;
+  }
+  .text-luxury-gold-light {
+    @apply text-teal-500;
+  }
+  .text-luxury-gold-dark {
+    @apply text-teal-700;
+  }
+  .text-dark-text {
+    @apply text-foreground;
+  }
+  .text-medium-text {
+    @apply text-muted-foreground;
+  }
+
+  /* Border colors */
+  .border-luxury-gold {
+    @apply border-teal-600;
+  }
+  .border-luxury-gold\/30 {
+    border-color: rgb(13 148 136 / 0.3);
+  }
+  .border-luxury-gold\/20 {
+    border-color: rgb(13 148 136 / 0.2);
+  }
+  .border-luxury-navy {
+    @apply border-charcoal-700;
+  }
+
+  /* Gradient utilities */
+  .from-luxury-gold {
+    --tw-gradient-from: #0d9488 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(13 148 136 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .to-luxury-gold-light {
+    --tw-gradient-to: #14b8a6 var(--tw-gradient-to-position);
+  }
+
+  /* Hover states */
+  .hover\:bg-luxury-gold:hover {
+    @apply bg-teal-600;
+  }
+  .hover\:bg-luxury-gold-light:hover {
+    @apply bg-teal-500;
+  }
+  .hover\:text-luxury-gold:hover {
+    @apply text-teal-600;
+  }
+  .hover\:text-luxury-gold-dark:hover {
+    @apply text-teal-700;
+  }
+  .hover\:text-luxury-ivory:hover {
+    @apply text-white;
+  }
+  .hover\:text-luxury-navy:hover {
+    @apply text-foreground;
+  }
+  .hover\:bg-luxury-navy:hover {
+    @apply bg-charcoal-700;
+  }
+  .hover\:border-luxury-gold:hover {
+    @apply border-teal-600;
+  }
+
+  /* Focus states */
+  .focus\:border-luxury-gold:focus {
+    @apply border-teal-600;
+  }
+  .focus\:ring-luxury-gold:focus {
+    --tw-ring-color: #0d9488;
+  }
+}

@@ -60,7 +60,7 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 md:h-20">
+        <div className="flex items-center justify-between h-[72px] md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
@@ -109,7 +109,7 @@ export function Header() {
                         className="flex items-start gap-3 p-3 rounded-lg hover:bg-teal-50 transition-colors duration-200 group"
                       >
                         <div className="w-9 h-9 rounded-lg bg-teal-50 group-hover:bg-teal-100 flex items-center justify-center shrink-0 transition-colors">
-                          <item.icon className="h-4.5 w-4.5 text-teal-600" />
+                          <item.icon className="h-[18px] w-[18px] text-teal-600" />
                         </div>
                         <div>
                           <span className="text-sm font-medium text-foreground block">{item.label}</span>

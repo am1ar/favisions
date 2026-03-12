@@ -79,6 +79,16 @@ const config: Config = {
           800: "#121220",
           900: "#0a0a14",
         },
+        /* Legacy luxury color aliases - map to current design system */
+        "luxury-ivory": "#FAF8F5",
+        "luxury-navy": "#1a1a2e",
+        "luxury-gold": {
+          DEFAULT: "#0d9488",
+          light: "#14b8a6",
+          dark: "#0f766e",
+        },
+        "dark-text": "#1A1A2E",
+        "medium-text": "#6B7280",
       },
       borderRadius: {
         lg: "var(--radius)",
