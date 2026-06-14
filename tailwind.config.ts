@@ -116,6 +116,16 @@ const config: Config = {
           800: "#1f2937",
           900: "#111827",
         },
+        /* Luxury Theme Colors for Inner Pages */
+        "luxury-gold": {
+          DEFAULT: "#D4A574", /* Warm luxury gold */
+          light: "#E8C8A0",
+          dark: "#A6845C",
+        },
+        "luxury-ivory": "#FAF6F1", /* Warm off-white */
+        "luxury-navy": "#094E80", /* Deep navy */
+        "dark-text": "#2C3E50", /* Readable dark text */
+        "medium-text": "#5A6B7F", /* Medium gray text */
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -176,6 +186,7 @@ const config: Config = {
         "success-gradient": "linear-gradient(135deg, #8DC63F 0%, #a8d969 100%)",
         "hero-gradient": "linear-gradient(160deg, #111827 0%, #22D3EE 40%, #F7941D 100%)",
         "dark-hero": "linear-gradient(to bottom, rgba(17, 24, 39, 0.9) 0%, rgba(31, 41, 55, 0.7) 100%)",
+        "luxury-gradient": "linear-gradient(135deg, #D4A574 0%, #B8916A 50%, #8A6F4F 100%)",
       },
     },
   },
