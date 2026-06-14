@@ -34,9 +34,9 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-navy-700 text-white/90">
+    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
       {/* Accent gradient line */}
-      <div className="h-1 bg-navy-gradient" />
+      <div className="h-1 bg-gradient-to-r from-cyan-400 via-orange-500 to-cyan-400" />
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
@@ -51,7 +51,7 @@ export function Footer() {
                 className="h-14 w-auto opacity-90"
               />
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed max-w-sm">
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               نقدم خدمات متكاملة في الإنشاءات والتشطيبات والنجارة الفاخرة،
               بالإضافة إلى خدمات تقنية المعلومات والخدمات اللوجستية المتقدمة.
               نلتزم بأعلى معايير الجودة والاحترافية.
@@ -64,9 +64,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-9 h-9 rounded-lg bg-white/10 hover:bg-cyan-500 flex items-center justify-center transition-colors duration-200"
+                  className="w-9 h-9 rounded-lg bg-gray-800 hover:bg-cyan-400 flex items-center justify-center transition-colors duration-200"
                 >
-                  <social.icon className="h-4 w-4 text-white" />
+                  <social.icon className="h-4 w-4 text-gray-300 hover:text-gray-900" />
                 </a>
               ))}
             </div>
@@ -74,7 +74,7 @@ export function Footer() {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider">خدماتنا</h3>
+            <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider">خدماتنا</h3>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
@@ -91,7 +91,7 @@ export function Footer() {
 
           {/* Gallery */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider">أعمالنا</h3>
+            <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider">أعمالنا</h3>
             <ul className="space-y-2.5">
               {galleryLinks.map((link) => (
                 <li key={link.href}>
@@ -108,7 +108,7 @@ export function Footer() {
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider">الشركة</h3>
+            <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-wider">الشركة</h3>
             <ul className="space-y-2.5">
               {companyLinks.map((link) => (
                 <li key={link.href}>
@@ -131,18 +131,18 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <div className="flex flex-col sm:flex-row gap-3 text-xs text-white/40">
+          <div className="flex flex-col sm:flex-row gap-3 text-xs text-gray-500">
             <p>&copy; 2025 شركة رؤى بعيدة. جميع الحقوق محفوظة.</p>
             <p className="hidden sm:block">|</p>
             <p>السجل التجاري: 7050417950</p>
           </div>
           <nav className="flex gap-5 text-xs">
-            <Link href="/terms-of-service" className="text-white/40 hover:text-cyan-400 transition-colors">
+            <Link href="/terms-of-service" className="text-gray-500 hover:text-cyan-400 transition-colors">
               شروط الخدمة
             </Link>
-            <Link href="/privacy-policy" className="text-white/40 hover:text-cyan-400 transition-colors">
+            <Link href="/privacy-policy" className="text-gray-500 hover:text-cyan-400 transition-colors">
               سياسة الخصوصية
             </Link>
           </nav>

@@ -136,7 +136,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${almarai.variable} font-sans bg-background text-foreground antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

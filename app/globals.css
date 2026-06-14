@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    /* Updated Palette - Deep Navy + Cyan/Teal + Orange + Lime + Neutrals */
+    /* Light Mode Palette (Default) */
     --background: 0 0% 100%; /* Pure White #FFFFFF */
     --foreground: 209 27% 26%; /* Deep Corporate Navy #094E80 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 209 27% 26%; /* #094E80 */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 209 27% 26%; /* Navy */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 209 27% 26%; /* #094E80 */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 209 27% 26%; /* Navy */
 
     --primary: 209 27% 26%; /* Deep Corporate Navy #094E80 */
     --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 190 90% 36%; /* Vibrant Cyan/Teal #0091BA */
+    --secondary: 190 90% 36%; /* Vibrant Cyan #0091BA */
     --secondary-foreground: 0 0% 100%; /* White */
 
     --muted: 240 10% 96%; /* Ultra-light gray #F8F9FA */
-    --muted-foreground: 210 10% 30%; /* Smooth Charcoal #2C3E50 */
+    --muted-foreground: 210 10% 30%; /* Charcoal #2C3E50 */
 
     --accent: 39 100% 50%; /* Solar Orange #F7941D */
     --accent-foreground: 0 0% 100%; /* White */
@@ -43,30 +43,40 @@
   }
 
   .dark {
-    --background: 209 27% 12%;
-    --foreground: 0 0% 100%;
-    --card: 209 27% 16%;
-    --card-foreground: 0 0% 100%;
-    --popover: 209 27% 16%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 209 27% 26%;
-    --secondary: 190 90% 36%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 209 20% 18%;
-    --muted-foreground: 210 10% 70%;
-    --accent: 39 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 120 65% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 209 20% 20%;
-    --input: 209 20% 20%;
-    --ring: 190 90% 36%;
-    --chart-1: 209 27% 40%;
-    --chart-2: 190 90% 45%;
-    --chart-3: 39 100% 55%;
-    --chart-4: 120 65% 60%;
-    --chart-5: 209 27% 25%;
+    /* Dark Mode Palette */
+    --background: 217 33% 7%; /* Deep Charcoal #111827 */
+    --foreground: 217 33% 89%; /* Pure White #FFFFFF */
+
+    --card: 217 32% 18%; /* Lighter Dark #1F2937 */
+    --card-foreground: 217 33% 89%; /* White */
+
+    --popover: 217 32% 18%; /* #1F2937 */
+    --popover-foreground: 217 33% 89%; /* White */
+
+    --primary: 217 33% 89%; /* White text */
+    --primary-foreground: 217 33% 7%; /* Dark background */
+
+    --secondary: 186 100% 50%; /* Electric Cyan #22D3EE */
+    --secondary-foreground: 217 33% 7%; /* Dark text */
+
+    --muted: 217 32% 18%; /* Dark card tone */
+    --muted-foreground: 217 15% 65%; /* Light gray #A1A5B0 */
+
+    --accent: 39 100% 50%; /* Solar Orange #F7941D */
+    --accent-foreground: 217 33% 89%; /* White text */
+
+    --destructive: 120 65% 55%; /* Lime Green #8DC63F */
+    --destructive-foreground: 217 33% 89%; /* White text */
+
+    --border: 217 32% 25%; /* Dark border #2D3748 */
+    --input: 217 32% 18%;
+    --ring: 186 100% 50%; /* Cyan ring */
+
+    --chart-1: 217 33% 89%; /* White */
+    --chart-2: 186 100% 50%; /* Cyan */
+    --chart-3: 39 100% 50%; /* Orange */
+    --chart-4: 120 65% 55%; /* Lime */
+    --chart-5: 217 32% 18%; /* Dark card */
   }
 }
 
@@ -83,33 +93,33 @@
 }
 
 /* ========================================
-   Glassmorphism Utilities
+   Glassmorphism Utilities (Dark Mode)
    ======================================== */
 @layer components {
   .glass {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(31, 41, 55, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
   .glass-dark {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(26, 26, 46, 0.82);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(34, 211, 238, 0.1);
   }
   .glass-card {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    background: rgba(31, 41, 55, 0.72);
+    border: 1px solid rgba(34, 211, 238, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
   .glass-teal {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(13, 148, 136, 0.08);
-    border: 1px solid rgba(13, 148, 136, 0.15);
+    background: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.2);
   }
 }
 
@@ -239,17 +249,17 @@
 }
 
 /* ========================================
-   Custom Gradient Meshes
+   Custom Gradient Meshes (Dark Mode)
    ======================================== */
 .gradient-mesh {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(13, 148, 136, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(232, 121, 106, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(26, 26, 46, 0.03) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(34, 211, 238, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(247, 148, 29, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(34, 211, 238, 0.06) 0%, transparent 50%);
 }
 
 .gradient-mesh-hero {
   background:
-    radial-gradient(ellipse at 30% 40%, rgba(13, 148, 136, 0.1) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 60%, rgba(232, 121, 106, 0.08) 0%, transparent 60%);
+    radial-gradient(ellipse at 30% 40%, rgba(34, 211, 238, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(247, 148, 29, 0.1) 0%, transparent 60%);
 }

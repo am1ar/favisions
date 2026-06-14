@@ -26,13 +26,13 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="w-full py-20 md:py-28" dir="rtl">
+    <section className="w-full py-20 md:py-28 bg-white dark:bg-gray-900" dir="rtl">
       <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-navy-900 mb-4 text-balance">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-navy-900 dark:text-white mb-4 text-balance">
             الأسئلة الشائعة
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl mx-auto">
             إجابات على الأسئلة الأكثر تداولاً حول خدماتنا وطرق التعاون معنا
           </p>
         </div>
@@ -41,23 +41,23 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-border rounded-lg overflow-hidden transition-all duration-200 hover:border-cyan-300 hover:shadow-md"
+              className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden transition-all duration-200 hover:border-cyan-600 dark:hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-navy-50 transition-colors duration-200 text-left"
+                className="w-full px-6 py-5 flex items-center justify-between bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors duration-200 text-left"
               >
-                <span className="font-semibold text-navy-900 text-lg">{faq.question}</span>
+                <span className="font-semibold text-navy-900 dark:text-white text-lg">{faq.question}</span>
                 <ChevronDown
-                  className={`h-5 w-5 text-cyan-600 shrink-0 transition-transform duration-300 ${
+                  className={`h-5 w-5 text-cyan-700 dark:text-cyan-400 shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
 
               {openIndex === index && (
-                <div className="px-6 py-5 bg-navy-50 border-t border-border">
-                  <p className="text-charcoal-500 leading-relaxed text-base">{faq.answer}</p>
+                <div className="px-6 py-5 bg-white dark:bg-gray-750 border-t border-gray-200 dark:border-gray-700">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">{faq.answer}</p>
                 </div>
               )}
             </div>

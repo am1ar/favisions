@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown, Building2, PaintBucket, Hammer, Monitor, Truck, BarChart3, ImageIcon, FolderOpen } from "lucide-react"
 import Image from "next/image"
+import { ThemeToggle } from "./theme-toggle"
 
 const servicesItems = [
   { href: "/construction-services", label: "خدمات الإنشاءات", icon: Building2, desc: "بناء وتشييد المباني والمنشآت" },
@@ -55,8 +56,8 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white shadow-lg shadow-navy-900/10 border-b border-border"
-          : "bg-white border-b border-border"
+          ? "bg-white dark:bg-gray-900 shadow-lg shadow-black/10 dark:shadow-black/40 border-b border-border"
+          : "bg-white dark:bg-gray-900 border-b border-border"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -77,7 +78,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             <Link
               href="/"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800`}
             >
               الرئيسية
             </Link>
@@ -89,7 +90,7 @@ export function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
+                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800`}
               >
                 خدماتنا
                 <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180" : ""}`} />
@@ -97,19 +98,19 @@ export function Header() {
 
               {activeDropdown === "services" && (
                 <div className="absolute top-full start-1/2 -translate-x-1/2 pt-2 animate-slide-down">
-                  <div className="bg-white rounded-xl shadow-xl shadow-navy-900/10 border border-border p-2 min-w-[420px] grid grid-cols-2 gap-1">
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/10 dark:shadow-black/40 border border-gray-200 dark:border-gray-700 p-2 min-w-[420px] grid grid-cols-2 gap-1">
                     {servicesItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-cyan-50 transition-colors duration-200 group"
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 group"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-cyan-50 group-hover:bg-cyan-100 flex items-center justify-center shrink-0 transition-colors">
-                          <item.icon className="h-4.5 w-4.5 text-cyan-500" />
+                        <div className="w-9 h-9 rounded-lg bg-cyan-100 dark:bg-cyan-500/20 group-hover:bg-cyan-200 dark:group-hover:bg-cyan-500/30 flex items-center justify-center shrink-0 transition-colors">
+                          <item.icon className="h-4.5 w-4.5 text-cyan-600 dark:text-cyan-400" />
                         </div>
                         <div>
-                          <span className="text-sm font-medium text-foreground block">{item.label}</span>
-                          <span className="text-xs text-muted-foreground leading-relaxed">{item.desc}</span>
+                          <span className="text-sm font-medium text-navy-900 dark:text-white block">{item.label}</span>
+                          <span className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</span>
                         </div>
                       </Link>
                     ))}
@@ -125,7 +126,7 @@ export function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
+                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800`}
               >
                 أعمالنا
                 <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${activeDropdown === "gallery" ? "rotate-180" : ""}`} />
@@ -133,15 +134,15 @@ export function Header() {
 
               {activeDropdown === "gallery" && (
                 <div className="absolute top-full start-1/2 -translate-x-1/2 pt-2 animate-slide-down">
-                  <div className="bg-white rounded-xl shadow-xl shadow-navy-900/10 border border-border p-2 min-w-[220px]">
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/10 dark:shadow-black/40 border border-gray-200 dark:border-gray-700 p-2 min-w-[220px]">
                     {galleryItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-cyan-50 transition-colors duration-200 group"
+                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 group"
                       >
-                        <item.icon className="h-4 w-4 text-cyan-500" />
-                        <span className="text-sm font-medium text-foreground">{item.label}</span>
+                        <item.icon className="h-4 w-4 text-cyan-600 dark:text-cyan-400" />
+                        <span className="text-sm font-medium text-navy-900 dark:text-white">{item.label}</span>
                       </Link>
                     ))}
                   </div>
@@ -151,53 +152,63 @@ export function Header() {
 
             <Link
               href="/project-workflow"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800`}
             >
               رحلة المشروع
             </Link>
 
             <Link
               href="/about"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800`}
             >
               من نحن
             </Link>
 
             <Link
               href="/news"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800`}
             >
               الأخبار
             </Link>
           </nav>
 
+          {/* Theme Toggle */}
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
+          </div>
+
           {/* CTA Button (desktop) */}
           <div className="hidden lg:block">
-            <Button asChild variant="accent" size="default">
+            <Button asChild variant="accent" size="default" className="bg-orange-500 hover:bg-orange-600 text-white">
               <Link href="/contact">تواصل معنا</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors text-navy-600 hover:bg-navy-50 hover:text-navy-800`}
-            aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <div className="md:hidden">
+              <ThemeToggle />
+            </div>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`p-2 rounded-lg transition-colors text-navy-600 dark:text-gray-200 hover:bg-navy-50 dark:hover:bg-gray-800 hover:text-navy-800 dark:hover:text-cyan-400`}
+              aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Overlay Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[64px] md:top-[80px] z-40 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}>
-          <div className="relative bg-background w-full max-w-sm h-full overflow-y-auto ml-auto shadow-lg">
+        <div className="lg:hidden fixed inset-0 top-[64px] md:top-[80px] z-40 bg-black/50 dark:bg-black/80 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}>
+          <div className="relative bg-white dark:bg-gray-900 w-full max-w-sm h-full overflow-y-auto ml-auto shadow-lg border-l border-gray-200 dark:border-gray-700">
             <nav className="px-4 py-6 flex flex-col gap-1">
               <Link
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "0ms" }}
               >
                 الرئيسية
@@ -205,17 +216,17 @@ export function Header() {
 
               {/* Mobile Services Section */}
               <div className="animate-stagger-in" style={{ animationDelay: "50ms" }}>
-                <p className="px-4 py-2 text-xs font-bold text-navy-600 uppercase tracking-wider">خدماتنا</p>
+                <p className="px-4 py-2 text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">خدماتنا</p>
                 {servicesItems.map((item, i) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-cyan-50 transition-colors animate-stagger-in"
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 transition-colors animate-stagger-in"
                     style={{ animationDelay: `${100 + i * 40}ms` }}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center">
-                      <item.icon className="h-4 w-4 text-cyan-500" />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-500/20 flex items-center justify-center">
+                      <item.icon className="h-4 w-4 text-cyan-600 dark:text-cyan-400" />
                     </div>
                     <span className="font-medium">{item.label}</span>
                   </Link>
@@ -224,29 +235,29 @@ export function Header() {
 
               {/* Mobile Gallery Section */}
               <div className="animate-stagger-in" style={{ animationDelay: "340ms" }}>
-                <p className="px-4 py-2 text-xs font-bold text-navy-600 uppercase tracking-wider mt-2">أعمالنا</p>
+                <p className="px-4 py-2 text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider mt-2">أعمالنا</p>
                 {galleryItems.map((item, i) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-cyan-50 transition-colors animate-stagger-in"
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 transition-colors animate-stagger-in"
                     style={{ animationDelay: `${380 + i * 40}ms` }}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center">
-                      <item.icon className="h-4 w-4 text-cyan-500" />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-500/20 flex items-center justify-center">
+                      <item.icon className="h-4 w-4 text-cyan-600 dark:text-cyan-400" />
                     </div>
                     <span className="font-medium">{item.label}</span>
                   </Link>
                 ))}
               </div>
 
-              <div className="h-px bg-border my-2" />
+              <div className="h-px bg-gray-200 dark:bg-gray-700 my-2" />
 
               <Link
                 href="/project-workflow"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "540ms" }}
               >
                 رحلة المشروع
@@ -254,7 +265,7 @@ export function Header() {
               <Link
                 href="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "580ms" }}
               >
                 من نحن
@@ -262,7 +273,7 @@ export function Header() {
               <Link
                 href="/news"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "620ms" }}
               >
                 الأخبار
@@ -270,14 +281,14 @@ export function Header() {
               <Link
                 href="/recruitment"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 dark:text-gray-200 hover:text-navy-800 dark:hover:text-cyan-400 hover:bg-navy-50 dark:hover:bg-gray-800 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "660ms" }}
               >
                 التوظيف
               </Link>
 
               <div className="pt-4 animate-stagger-in" style={{ animationDelay: "700ms" }}>
-                <Button asChild variant="accent" size="lg" className="w-full">
+                <Button asChild variant="accent" size="lg" className="w-full bg-orange-500 hover:bg-orange-600 text-white">
                   <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                     تواصل معنا
                   </Link>
