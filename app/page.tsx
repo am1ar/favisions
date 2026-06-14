@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Building2, PaintBucket, Hammer, Monitor, Truck, BarChart3, Award, Shield, Users, Star, CheckCircle, ArrowLeft } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FAQ } from "@/components/faq"
 
 const services = [
   {
@@ -70,39 +71,37 @@ const excellence = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-dvh bg-background text-foreground">
+    <div className="flex flex-col min-h-dvh bg-white text-foreground">
       <Header />
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-20 bg-white">
         {/* Hero Section */}
-        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-hero-gradient overflow-hidden">
-          <div className="absolute inset-0 gradient-mesh-hero opacity-60" />
+        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-white overflow-hidden" dir="rtl">
           {/* Decorative shapes */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-orange-400/8 rounded-full blur-3xl" />
+          <div className="absolute top-20 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-20 w-96 h-96 bg-orange-400/8 rounded-full blur-3xl" />
 
           <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-cyan-200 text-sm font-medium mb-6">
-                <span className="w-2 h-2 rounded-full bg-cyan-300 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
                 شريكك الاستراتيجي في المملكة العربية السعودية
               </div>
 
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 text-balance leading-tight">
-                شركة رؤى بعيدة
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-navy-900 mb-6 text-balance leading-tight">
+                شركة رؤى بعيدة للمقاولات | حلول الإنشاءات والتشييد المتكاملة
               </h1>
 
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-2xl">
-                نقدم خدمات متكاملة في الإنشاءات والتشطيبات والنجارة الفاخرة،
-                بالإضافة إلى خدمات تقنية المعلومات وتقديم الخدمات اللوجستية وتطوير أنظمة سلسلة التوريد.
+              <p className="text-lg md:text-xl text-charcoal-500 leading-relaxed mb-10 max-w-2xl">
+                نفخر في شركة رؤى بعيدة بتقديم خدمات المقاولات العامة والتشييد المتكاملة للمباني السكنية والتجارية في المملكة العربية السعودية. ندمج بين الابتكار الهندسي وأعلى معايير كود البناء السعودي لنقود مشاريعكم بكفاءة من الفكرة والتصميم وحتى التسليم المفتاح.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" variant="secondary">
-                  <Link href="/services">استكشف خدماتنا</Link>
+                <Button asChild size="lg" variant="accent">
+                  <Link href="/contact">احصل على استشارة هندسية مجانية</Link>
                 </Button>
-                <Button asChild size="lg" variant="accent" className="text-white border border-white/20 hover:bg-white/10 hover:text-white">
-                  <Link href="/contact">
-                    تواصل معنا
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="/project-workflow">
+                    اكتشف رحلة المشروع ومشاريعنا
                     <ArrowLeft className="h-4 w-4 mr-2" />
                   </Link>
                 </Button>
@@ -112,14 +111,14 @@ export default function HomePage() {
         </section>
 
         {/* Stats Section */}
-        <section className="relative -mt-12 z-20 px-6 md:px-8 lg:px-12">
+        <section className="relative -mt-12 z-20 px-6 md:px-8 lg:px-12" dir="rtl">
           <div className="container mx-auto">
-            <div className="glass-card rounded-2xl p-8 md:p-10">
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg shadow-navy-900/10 border border-border">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, i) => (
                   <div key={i} className="text-center">
                     <div className="text-3xl md:text-4xl font-extrabold text-cyan-600 mb-1">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+                    <div className="text-sm text-charcoal-500 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -128,13 +127,13 @@ export default function HomePage() {
         </section>
 
         {/* Core Values Section */}
-        <section className="w-full py-20 md:py-28">
+        <section className="w-full py-20 md:py-28 bg-white" dir="rtl">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
             <div className="text-center mb-14">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground mb-4 text-balance">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-navy-900 mb-4 text-balance">
                 قيمنا الأساسية
               </h2>
-              <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              <p className="text-charcoal-500 text-lg max-w-xl mx-auto">
                 القيم التي نؤمن بها وتوجه كل خطوة في مسيرتنا المهنية
               </p>
             </div>
@@ -144,8 +143,8 @@ export default function HomePage() {
                   <div className="w-16 h-16 rounded-2xl bg-cyan-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-cyan-100 transition-colors duration-300">
                     <item.icon className="h-8 w-8 text-cyan-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <h3 className="text-xl font-bold text-navy-900 mb-2">{item.title}</h3>
+                  <p className="text-charcoal-500 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -153,7 +152,7 @@ export default function HomePage() {
         </section>
 
         {/* Services Overview Section */}
-        <section className="w-full py-20 md:py-28 bg-navy-700 text-white">
+        <section className="w-full py-20 md:py-28 bg-navy-700 text-white" dir="rtl">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white mb-4 text-balance">
@@ -201,46 +200,49 @@ export default function HomePage() {
         </section>
 
         {/* Vision of Excellence Section */}
-        <section className="w-full py-20 md:py-28">
+        <section className="w-full py-20 md:py-28 bg-white" dir="rtl">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
             <div className="text-center mb-14">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground mb-4 text-balance">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-navy-900 mb-4 text-balance">
                 رؤية التميز
               </h2>
-              <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              <p className="text-charcoal-500 text-lg max-w-xl mx-auto">
                 معايير عالية وجودة استثنائية في كل مشروع
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
               {excellence.map((item, i) => (
-                <div key={i} className="glass-card rounded-2xl p-8 text-center hover:-translate-y-1 transition-all duration-300">
+                <div key={i} className="rounded-2xl p-8 text-center hover:-translate-y-1 transition-all duration-300 bg-white border border-border shadow-sm hover:shadow-md">
                   <div className="w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center mx-auto mb-5">
                     <item.icon className="h-7 w-7 text-orange-500" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-bold text-navy-900 mb-2">{item.title}</h3>
+                  <p className="text-charcoal-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <FAQ />
+
         {/* CTA Section */}
-        <section className="w-full py-20 md:py-28 bg-muted">
+        <section className="w-full py-20 md:py-28 bg-navy-50" dir="rtl">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
             <div className="text-center max-w-2xl mx-auto">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground mb-4 text-balance">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-navy-900 mb-4 text-balance">
                 ابدأ مشروعك معنا
               </h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                تواصل معنا اليوم للحصول على استشارة مجانية وتقدير سعر لمشروعك
+              <p className="text-charcoal-500 text-lg mb-8 leading-relaxed">
+                تواصل معنا اليوم للحصول على استشارة هندسية مجانية وتقدير سعر شامل لمشروعك
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
-                <Button asChild size="lg" variant="secondary">
-                  <Link href="/contact">احصل على استشارة مجانية</Link>
+                <Button asChild size="lg" variant="accent">
+                  <Link href="/contact">احصل على استشارة هندسية مجانية</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href="/project-workflow">رحلة المشروع</Link>
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="/project-workflow">اكتشف رحلة المشروع</Link>
                 </Button>
               </div>
             </div>
