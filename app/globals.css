@@ -4,69 +4,69 @@
 
 @layer base {
   :root {
-    /* Updated Palette - Deep Navy + Cyan/Teal + Orange + Lime + Neutrals */
-    --background: 0 0% 100%; /* Pure White #FFFFFF */
-    --foreground: 209 27% 26%; /* Deep Corporate Navy #094E80 */
+    /* Premium Dark Mode Palette */
+    --background: 217 33% 7%; /* Deep Rich Charcoal/Navy #111827 */
+    --foreground: 217 33% 89%; /* Pure White #FFFFFF */
 
-    --card: 0 0% 100%;
-    --card-foreground: 209 27% 26%; /* #094E80 */
+    --card: 217 32% 18%; /* Lighter Dark Tone #1F2937 */
+    --card-foreground: 217 33% 89%; /* White */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 209 27% 26%; /* #094E80 */
+    --popover: 217 32% 18%; /* #1F2937 */
+    --popover-foreground: 217 33% 89%; /* White */
 
-    --primary: 209 27% 26%; /* Deep Corporate Navy #094E80 */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 217 33% 89%; /* White text on dark */
+    --primary-foreground: 217 33% 7%; /* Dark background */
 
-    --secondary: 190 90% 36%; /* Vibrant Cyan/Teal #0091BA */
-    --secondary-foreground: 0 0% 100%; /* White */
+    --secondary: 186 100% 50%; /* Electric Cyan/Teal #22D3EE */
+    --secondary-foreground: 217 33% 7%; /* Dark text */
 
-    --muted: 240 10% 96%; /* Ultra-light gray #F8F9FA */
-    --muted-foreground: 210 10% 30%; /* Smooth Charcoal #2C3E50 */
+    --muted: 217 32% 18%; /* Card/container tone */
+    --muted-foreground: 217 15% 65%; /* Light gray text #A1A5B0 */
 
     --accent: 39 100% 50%; /* Solar Orange #F7941D */
-    --accent-foreground: 0 0% 100%; /* White */
+    --accent-foreground: 217 33% 89%; /* White text */
 
     --destructive: 120 65% 55%; /* Lime Green #8DC63F */
-    --destructive-foreground: 0 0% 100%; /* White */
+    --destructive-foreground: 217 33% 7%; /* Dark text */
 
-    --border: 240 10% 93%; /* Light border */
-    --input: 240 10% 93%;
-    --ring: 190 90% 36%; /* Cyan ring */
+    --border: 217 32% 25%; /* Dark border #2D3748 */
+    --input: 217 32% 18%;
+    --ring: 186 100% 50%; /* Cyan ring */
 
-    --chart-1: 209 27% 26%; /* Navy */
-    --chart-2: 190 90% 36%; /* Cyan */
+    --chart-1: 217 33% 89%; /* White */
+    --chart-2: 186 100% 50%; /* Cyan */
     --chart-3: 39 100% 50%; /* Orange */
     --chart-4: 120 65% 55%; /* Lime */
-    --chart-5: 0 0% 100%; /* White */
+    --chart-5: 217 32% 18%; /* Card tone */
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 209 27% 12%;
-    --foreground: 0 0% 100%;
-    --card: 209 27% 16%;
-    --card-foreground: 0 0% 100%;
-    --popover: 209 27% 16%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 209 27% 26%;
-    --secondary: 190 90% 36%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 209 20% 18%;
-    --muted-foreground: 210 10% 70%;
+    --background: 217 33% 7%;
+    --foreground: 217 33% 89%;
+    --card: 217 32% 18%;
+    --card-foreground: 217 33% 89%;
+    --popover: 217 32% 18%;
+    --popover-foreground: 217 33% 89%;
+    --primary: 217 33% 89%;
+    --primary-foreground: 217 33% 7%;
+    --secondary: 186 100% 50%;
+    --secondary-foreground: 217 33% 7%;
+    --muted: 217 32% 18%;
+    --muted-foreground: 217 15% 65%;
     --accent: 39 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 217 33% 89%;
     --destructive: 120 65% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 209 20% 20%;
-    --input: 209 20% 20%;
-    --ring: 190 90% 36%;
-    --chart-1: 209 27% 40%;
-    --chart-2: 190 90% 45%;
+    --destructive-foreground: 217 33% 7%;
+    --border: 217 32% 25%;
+    --input: 217 32% 18%;
+    --ring: 186 100% 50%;
+    --chart-1: 217 33% 89%;
+    --chart-2: 186 100% 50%;
     --chart-3: 39 100% 55%;
     --chart-4: 120 65% 60%;
-    --chart-5: 209 27% 25%;
+    --chart-5: 217 32% 18%;
   }
 }
 
@@ -83,33 +83,33 @@
 }
 
 /* ========================================
-   Glassmorphism Utilities
+   Glassmorphism Utilities (Dark Mode)
    ======================================== */
 @layer components {
   .glass {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(31, 41, 55, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
   .glass-dark {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(26, 26, 46, 0.82);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(34, 211, 238, 0.1);
   }
   .glass-card {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    background: rgba(31, 41, 55, 0.72);
+    border: 1px solid rgba(34, 211, 238, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
   .glass-teal {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(13, 148, 136, 0.08);
-    border: 1px solid rgba(13, 148, 136, 0.15);
+    background: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.2);
   }
 }
 
@@ -239,17 +239,17 @@
 }
 
 /* ========================================
-   Custom Gradient Meshes
+   Custom Gradient Meshes (Dark Mode)
    ======================================== */
 .gradient-mesh {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(13, 148, 136, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(232, 121, 106, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(26, 26, 46, 0.03) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(34, 211, 238, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(247, 148, 29, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(34, 211, 238, 0.06) 0%, transparent 50%);
 }
 
 .gradient-mesh-hero {
   background:
-    radial-gradient(ellipse at 30% 40%, rgba(13, 148, 136, 0.1) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 60%, rgba(232, 121, 106, 0.08) 0%, transparent 60%);
+    radial-gradient(ellipse at 30% 40%, rgba(34, 211, 238, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(247, 148, 29, 0.1) 0%, transparent 60%);
 }
