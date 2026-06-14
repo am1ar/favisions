@@ -34,9 +34,9 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal-700 text-white/90">
+    <footer className="bg-navy-700 text-white/90">
       {/* Accent gradient line */}
-      <div className="h-1 bg-teal-gradient" />
+      <div className="h-1 bg-navy-gradient" />
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
@@ -44,11 +44,11 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="inline-block">
               <Image
-                src="/logo.png"
+                src="/farvisions-logo.png"
                 alt="شركة رؤى بعيدة"
-                width={140}
-                height={48}
-                className="h-12 w-auto brightness-0 invert opacity-90"
+                width={160}
+                height={64}
+                className="h-14 w-auto opacity-90"
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-sm">
@@ -64,7 +64,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-9 h-9 rounded-lg bg-white/10 hover:bg-teal-600 flex items-center justify-center transition-colors duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/10 hover:bg-cyan-500 flex items-center justify-center transition-colors duration-200"
                 >
                   <social.icon className="h-4 w-4 text-white" />
                 </a>
@@ -80,7 +80,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/55 hover:text-teal-400 transition-colors duration-200"
+                    className="text-sm text-white/55 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -97,7 +97,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/55 hover:text-teal-400 transition-colors duration-200"
+                    className="text-sm text-white/55 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -114,7 +114,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/55 hover:text-teal-400 transition-colors duration-200"
+                    className="text-sm text-white/55 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -139,10 +139,10 @@ export function Footer() {
             <p>السجل التجاري: 7050417950</p>
           </div>
           <nav className="flex gap-5 text-xs">
-            <Link href="/terms-of-service" className="text-white/40 hover:text-teal-400 transition-colors">
+            <Link href="/terms-of-service" className="text-white/40 hover:text-cyan-400 transition-colors">
               شروط الخدمة
             </Link>
-            <Link href="/privacy-policy" className="text-white/40 hover:text-teal-400 transition-colors">
+            <Link href="/privacy-policy" className="text-white/40 hover:text-cyan-400 transition-colors">
               سياسة الخصوصية
             </Link>
           </nav>

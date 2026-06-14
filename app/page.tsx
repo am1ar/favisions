@@ -77,13 +77,13 @@ export default function HomePage() {
         <section className="relative w-full py-20 md:py-32 lg:py-40 bg-hero-gradient overflow-hidden">
           <div className="absolute inset-0 gradient-mesh-hero opacity-60" />
           {/* Decorative shapes */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-coral-400/8 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-20 w-96 h-96 bg-orange-400/8 rounded-full blur-3xl" />
 
           <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-teal-300 text-sm font-medium mb-6">
-                <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-cyan-200 text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-cyan-300 animate-pulse" />
                 شريكك الاستراتيجي في المملكة العربية السعودية
               </div>
 
@@ -100,7 +100,7 @@ export default function HomePage() {
                 <Button asChild size="lg" variant="secondary">
                   <Link href="/services">استكشف خدماتنا</Link>
                 </Button>
-                <Button asChild size="lg" variant="ghost" className="text-white border border-white/20 hover:bg-white/10 hover:text-white">
+                <Button asChild size="lg" variant="accent" className="text-white border border-white/20 hover:bg-white/10 hover:text-white">
                   <Link href="/contact">
                     تواصل معنا
                     <ArrowLeft className="h-4 w-4 mr-2" />
@@ -118,7 +118,7 @@ export default function HomePage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, i) => (
                   <div key={i} className="text-center">
-                    <div className="text-3xl md:text-4xl font-extrabold text-teal-600 mb-1">{stat.value}</div>
+                    <div className="text-3xl md:text-4xl font-extrabold text-cyan-600 mb-1">{stat.value}</div>
                     <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
                   </div>
                 ))}
@@ -141,8 +141,8 @@ export default function HomePage() {
             <div className="grid gap-8 md:grid-cols-3">
               {values.map((item, i) => (
                 <div key={i} className="text-center group">
-                  <div className="w-16 h-16 rounded-2xl bg-teal-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-teal-100 transition-colors duration-300">
-                    <item.icon className="h-8 w-8 text-teal-600" />
+                  <div className="w-16 h-16 rounded-2xl bg-cyan-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-cyan-100 transition-colors duration-300">
+                    <item.icon className="h-8 w-8 text-cyan-600" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
@@ -153,7 +153,7 @@ export default function HomePage() {
         </section>
 
         {/* Services Overview Section */}
-        <section className="w-full py-20 md:py-28 bg-charcoal-700 text-white">
+        <section className="w-full py-20 md:py-28 bg-navy-700 text-white">
           <div className="container mx-auto px-6 md:px-8 lg:px-12">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white mb-4 text-balance">
@@ -169,22 +169,22 @@ export default function HomePage() {
                 <Link
                   key={service.href}
                   href={service.href}
-                  className="group block rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-1"
+                  className="group block rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-teal-500/15 flex items-center justify-center mb-4 group-hover:bg-teal-500/25 transition-colors">
-                    <service.icon className="h-6 w-6 text-teal-400" />
+                  <div className="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/25 transition-colors">
+                    <service.icon className="h-6 w-6 text-cyan-400" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-white/50 text-sm mb-4 leading-relaxed">{service.desc}</p>
                   <ul className="space-y-2">
                     {service.features.map((f, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-white/60">
-                        <CheckCircle className="h-3.5 w-3.5 text-teal-400 shrink-0" />
+                        <CheckCircle className="h-3.5 w-3.5 text-cyan-400 shrink-0" />
                         {f}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-5 flex items-center gap-2 text-teal-400 text-sm font-medium group-hover:gap-3 transition-all">
+                  <div className="mt-5 flex items-center gap-2 text-cyan-400 text-sm font-medium group-hover:gap-3 transition-all">
                     اقرأ المزيد
                     <ArrowLeft className="h-3.5 w-3.5" />
                   </div>
@@ -214,8 +214,8 @@ export default function HomePage() {
             <div className="grid gap-8 md:grid-cols-3">
               {excellence.map((item, i) => (
                 <div key={i} className="glass-card rounded-2xl p-8 text-center hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-xl bg-coral-50 flex items-center justify-center mx-auto mb-5">
-                    <item.icon className="h-7 w-7 text-coral-500" />
+                  <div className="w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center mx-auto mb-5">
+                    <item.icon className="h-7 w-7 text-orange-500" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>

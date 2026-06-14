@@ -55,20 +55,20 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass shadow-lg shadow-charcoal-900/5 border-b border-border"
-          : "bg-charcoal-700/90 backdrop-blur-md border-b border-white/10"
+          ? "bg-white shadow-lg shadow-navy-900/10 border-b border-border"
+          : "bg-white border-b border-border"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/logo.png"
+              src="/farvisions-logo.png"
               alt="شركة رؤى بعيدة"
-              width={120}
-              height={40}
-              className="h-8 w-auto sm:h-10 md:h-12 lg:h-14"
+              width={160}
+              height={64}
+              className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
               priority
             />
           </Link>
@@ -77,9 +77,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             <Link
               href="/"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                scrolled ? "text-foreground hover:text-teal-600 hover:bg-muted" : "text-white/90 hover:text-white hover:bg-white/10"
-              }`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
             >
               الرئيسية
             </Link>
@@ -91,9 +89,7 @@ export function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                  scrolled ? "text-foreground hover:text-teal-600 hover:bg-muted" : "text-white/90 hover:text-white hover:bg-white/10"
-                }`}
+                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
               >
                 خدماتنا
                 <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180" : ""}`} />
@@ -101,15 +97,15 @@ export function Header() {
 
               {activeDropdown === "services" && (
                 <div className="absolute top-full start-1/2 -translate-x-1/2 pt-2 animate-slide-down">
-                  <div className="glass rounded-xl shadow-xl shadow-charcoal-900/10 p-2 min-w-[420px] grid grid-cols-2 gap-1">
+                  <div className="bg-white rounded-xl shadow-xl shadow-navy-900/10 border border-border p-2 min-w-[420px] grid grid-cols-2 gap-1">
                     {servicesItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-teal-50 transition-colors duration-200 group"
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-cyan-50 transition-colors duration-200 group"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-teal-50 group-hover:bg-teal-100 flex items-center justify-center shrink-0 transition-colors">
-                          <item.icon className="h-4.5 w-4.5 text-teal-600" />
+                        <div className="w-9 h-9 rounded-lg bg-cyan-50 group-hover:bg-cyan-100 flex items-center justify-center shrink-0 transition-colors">
+                          <item.icon className="h-4.5 w-4.5 text-cyan-500" />
                         </div>
                         <div>
                           <span className="text-sm font-medium text-foreground block">{item.label}</span>
@@ -129,9 +125,7 @@ export function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                  scrolled ? "text-foreground hover:text-teal-600 hover:bg-muted" : "text-white/90 hover:text-white hover:bg-white/10"
-                }`}
+                className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
               >
                 أعمالنا
                 <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${activeDropdown === "gallery" ? "rotate-180" : ""}`} />
@@ -139,14 +133,14 @@ export function Header() {
 
               {activeDropdown === "gallery" && (
                 <div className="absolute top-full start-1/2 -translate-x-1/2 pt-2 animate-slide-down">
-                  <div className="glass rounded-xl shadow-xl shadow-charcoal-900/10 p-2 min-w-[220px]">
+                  <div className="bg-white rounded-xl shadow-xl shadow-navy-900/10 border border-border p-2 min-w-[220px]">
                     {galleryItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-teal-50 transition-colors duration-200 group"
+                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-cyan-50 transition-colors duration-200 group"
                       >
-                        <item.icon className="h-4 w-4 text-teal-600" />
+                        <item.icon className="h-4 w-4 text-cyan-500" />
                         <span className="text-sm font-medium text-foreground">{item.label}</span>
                       </Link>
                     ))}
@@ -157,27 +151,21 @@ export function Header() {
 
             <Link
               href="/project-workflow"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                scrolled ? "text-foreground hover:text-teal-600 hover:bg-muted" : "text-white/90 hover:text-white hover:bg-white/10"
-              }`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
             >
               رحلة المشروع
             </Link>
 
             <Link
               href="/about"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                scrolled ? "text-foreground hover:text-teal-600 hover:bg-muted" : "text-white/90 hover:text-white hover:bg-white/10"
-              }`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
             >
               من نحن
             </Link>
 
             <Link
               href="/news"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                scrolled ? "text-foreground hover:text-teal-600 hover:bg-muted" : "text-white/90 hover:text-white hover:bg-white/10"
-              }`}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-navy-600 hover:text-navy-800 hover:bg-navy-50`}
             >
               الأخبار
             </Link>
@@ -185,7 +173,7 @@ export function Header() {
 
           {/* CTA Button (desktop) */}
           <div className="hidden lg:block">
-            <Button asChild variant="secondary" size="default">
+            <Button asChild variant="accent" size="default">
               <Link href="/contact">تواصل معنا</Link>
             </Button>
           </div>
@@ -193,9 +181,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              scrolled ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"
-            }`}
+            className={`lg:hidden p-2 rounded-lg transition-colors text-navy-600 hover:bg-navy-50 hover:text-navy-800`}
             aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -205,14 +191,13 @@ export function Header() {
 
       {/* Mobile Overlay Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[72px] z-40">
-          <div className="absolute inset-0 bg-charcoal-700/60 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
-          <div className="relative bg-background h-full overflow-y-auto">
-            <nav className="container mx-auto px-4 py-6 flex flex-col gap-1">
+        <div className="lg:hidden fixed inset-0 top-[64px] md:top-[80px] z-40 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}>
+          <div className="relative bg-background w-full max-w-sm h-full overflow-y-auto ml-auto shadow-lg">
+            <nav className="px-4 py-6 flex flex-col gap-1">
               <Link
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-muted font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "0ms" }}
               >
                 الرئيسية
@@ -220,17 +205,17 @@ export function Header() {
 
               {/* Mobile Services Section */}
               <div className="animate-stagger-in" style={{ animationDelay: "50ms" }}>
-                <p className="px-4 py-2 text-xs font-bold text-muted-foreground uppercase tracking-wider">خدماتنا</p>
+                <p className="px-4 py-2 text-xs font-bold text-navy-600 uppercase tracking-wider">خدماتنا</p>
                 {servicesItems.map((item, i) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-foreground hover:bg-muted transition-colors animate-stagger-in"
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-cyan-50 transition-colors animate-stagger-in"
                     style={{ animationDelay: `${100 + i * 40}ms` }}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center">
-                      <item.icon className="h-4 w-4 text-teal-600" />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center">
+                      <item.icon className="h-4 w-4 text-cyan-500" />
                     </div>
                     <span className="font-medium">{item.label}</span>
                   </Link>
@@ -239,17 +224,17 @@ export function Header() {
 
               {/* Mobile Gallery Section */}
               <div className="animate-stagger-in" style={{ animationDelay: "340ms" }}>
-                <p className="px-4 py-2 text-xs font-bold text-muted-foreground uppercase tracking-wider mt-2">أعمالنا</p>
+                <p className="px-4 py-2 text-xs font-bold text-navy-600 uppercase tracking-wider mt-2">أعمالنا</p>
                 {galleryItems.map((item, i) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-foreground hover:bg-muted transition-colors animate-stagger-in"
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-cyan-50 transition-colors animate-stagger-in"
                     style={{ animationDelay: `${380 + i * 40}ms` }}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center">
-                      <item.icon className="h-4 w-4 text-teal-600" />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center">
+                      <item.icon className="h-4 w-4 text-cyan-500" />
                     </div>
                     <span className="font-medium">{item.label}</span>
                   </Link>
@@ -261,7 +246,7 @@ export function Header() {
               <Link
                 href="/project-workflow"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-muted font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "540ms" }}
               >
                 رحلة المشروع
@@ -269,7 +254,7 @@ export function Header() {
               <Link
                 href="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-muted font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "580ms" }}
               >
                 من نحن
@@ -277,7 +262,7 @@ export function Header() {
               <Link
                 href="/news"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-muted font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "620ms" }}
               >
                 الأخبار
@@ -285,14 +270,14 @@ export function Header() {
               <Link
                 href="/recruitment"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-muted font-medium transition-colors animate-stagger-in"
+                className="px-4 py-3 rounded-lg text-navy-600 hover:text-navy-800 hover:bg-navy-50 font-medium transition-colors animate-stagger-in"
                 style={{ animationDelay: "660ms" }}
               >
                 التوظيف
               </Link>
 
               <div className="pt-4 animate-stagger-in" style={{ animationDelay: "700ms" }}>
-                <Button asChild variant="secondary" size="lg" className="w-full">
+                <Button asChild variant="accent" size="lg" className="w-full">
                   <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                     تواصل معنا
                   </Link>
