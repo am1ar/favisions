@@ -94,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" suppressHydrationWarning className="bg-background">
       <head>
         <script
           type="application/ld+json"
@@ -136,7 +136,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${almarai.variable} font-sans bg-background text-foreground antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange forcedTheme={undefined} storageKey="theme">
           {children}
         </ThemeProvider>
       </body>
